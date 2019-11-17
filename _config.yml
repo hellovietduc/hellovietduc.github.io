@@ -1,0 +1,40 @@
+# Site settings
+title: vietduc01100001
+description: "The drafts of my mind"
+url: "https://vietduc01100001.github.io"
+
+# Author
+author:
+  name: vietduc01100001
+  url: https://vietduc01100001.github.io
+  email: vietduc01100001@gmail.com
+
+# Build settings
+markdown: kramdown
+include:
+  - _pages
+
+# Assets
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Gems
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jemoji #Uncomment this to allow emoji in your post
+
+# Permalinks
+permalink: /:year-:month-:day/:title
+paginate: 10
+
+# Google Analytics
+# google_analytics:
+
+# Disqus (Set to your disqus id)
+# disqus: id
+
+# Excludes
+exclude: [Gemfile, Gemfile.lock, vietduc.gemspec, docker-compose.yml, README.md]
