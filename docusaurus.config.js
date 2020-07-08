@@ -11,13 +11,18 @@ module.exports = {
       title: 'vietduc01100001',
       logo: {
         alt: 'logo',
-        src: 'img/logo.png',
+        src: 'img/logo.png'
       },
       links: [
         {
+          to: 'projects',
+          label: 'Projects',
+          position: 'left'
+        },
+        {
           to: 'about',
           label: 'About me',
-          position: 'right',
+          position: 'right'
         },
         {
           label: 'Links',
@@ -25,25 +30,25 @@ module.exports = {
           items: [
             {
               label: 'LinkedIn',
-              href: 'https://www.linkedin.com/in/vietduc01100001',
+              href: 'https://www.linkedin.com/in/vietduc01100001'
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/vietduc01100001',
+              href: 'https://github.com/vietduc01100001'
             },
             {
               label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/users/8943850/duc-nguyen',
+              href: 'https://stackoverflow.com/users/8943850/duc-nguyen'
             }
-          ],
-        },
+          ]
+        }
       ],
-      hideOnScroll: true,
+      hideOnScroll: true
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} vietduc01100001`,
-    },
+      copyright: `Copyright © ${new Date().getFullYear()} vietduc01100001`
+    }
   },
   presets: [
     [
@@ -55,13 +60,14 @@ module.exports = {
           showReadingTime: true,
           feedOptions: {
             type: 'all',
-            copyright: `Copyright © ${new Date().getFullYear()} vietduc01100001`,
-          },
+            copyright: `Copyright © ${new Date().getFullYear()} vietduc01100001`
+          }
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      },
-    ],
+          customCss: require.resolve('./src/css/custom.css')
+        }
+      }
+    ]
   ],
+  plugins: ['@docusaurus/plugin-ideal-image']
 };

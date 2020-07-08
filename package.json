@@ -8,13 +8,6 @@
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy"
   },
-  "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.58",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.58",
-    "clsx": "^1.1.1",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -26,5 +19,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@docusaurus/core": "^2.0.0-alpha.58",
+    "@docusaurus/plugin-ideal-image": "^2.0.0-alpha.39",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.58",
+    "clsx": "^1.1.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  },
+  "devDependencies": {
+    "@vietduc/eslint-config": "^1.0.4",
+    "eslint": "^7.4.0",
+    "eslint-plugin-react": "^7.20.3",
+    "husky": "^4.2.5"
   }
 }
