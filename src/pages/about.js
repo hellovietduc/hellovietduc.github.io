@@ -26,8 +26,8 @@ function About() {
               </p>
               <p>
                 Mình là một back-end developer, tuy nhiên mình cũng quan tâm tới nhiều chủ đề khác
-                trong ngành lập trình. Trang web được lập ra với mục đích chia sẻ đống <b><i>&ldquo;
-                drafts in my mind&rdquo;</i></b>, hi vọng chúng sẽ không nhàm chán. 😁
+                trong ngành lập trình. Trang web được lập ra với mục đích chia sẻ đống <b><i>“drafts
+                in my mind”</i></b>, hi vọng chúng sẽ không nhàm chán. 😁
               </p>
               <p>
                 Các bạn có thể ghé qua <a href="https://github.com/vietduc01100001" target="_blank"
