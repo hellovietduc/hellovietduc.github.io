@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
+import styles from '../css/about.module.css';
 
 function About() {
   return (
@@ -7,22 +8,17 @@ function About() {
       <div className="container margin-vert--lg">
         <div className="row">
           <div className="col col--8 col--offset-2">
-            <div
-              style={{
-                textAlign: 'center',
-                marginBottom: '20px',
-                color: '#666'
-              }}>
+            <div className={styles.profile}>
               <img
                 src="img/logo.png"
                 alt="vietduc01100001"
-                className="circle-image"
+                className={styles.circleImage}
               />
               <div>
                 The drafts in my mind.
               </div>
             </div>
-            <div style={{ textAlign: 'justify' }}>
+            <div className={styles.intro}>
               <p>
                 Xin chào 👋, mình là <b>Việt Đức</b>. Nickname hay sử dụng là <code>vietduc01100001
                 </code> (thực ra thích nickname ngắn hơn nhưng vì hay bị <i>username already taken
@@ -34,15 +30,8 @@ function About() {
                 drafts in my mind&rdquo;</i></b>, hi vọng chúng sẽ không nhàm chán. 😁
               </p>
               <p>
-                Các bạn có thể ghé qua
-                <a
-                  href="https://github.com/vietduc01100001"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub
-                </a>
-                của mình, nơi mà chứa cả drafts và sh*t. 😱💩
+                Các bạn có thể ghé qua <a href="https://github.com/vietduc01100001" target="_blank"
+                  rel="noreferrer">GitHub</a> của mình, nơi mà chứa cả drafts và sh*t. 😱💩
               </p>
             </div>
           </div>

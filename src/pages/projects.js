@@ -1,23 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Layout from '@theme/Layout';
+import styles from '../css/projects.module.css';
 
-function Card({ imgPath, text, projectLink }) {
+const projectList = [{
+  name: 'The Playground',
+  img: 'img/theplayground.png',
+  link: 'https://vietduc01100001.tech/theplayground'
+}];
+
+function Card({ name, img, link }) {
   const goToProject = () => {
-    window.open(projectLink);
+    window.open(link);
   };
   return (
-    <div className="project-card" onClick={projectLink ? goToProject : () => { }}>
-      <img src={imgPath} />
-      <div className="noselect">{text}</div>
+    <div className={styles.projectCard} onClick={link ? goToProject : () => { }}>
+      <img src={img} />
+      <div className={styles.noselect}>{name}</div>
     </div>
   );
 }
 
 Card.propTypes = {
-  imgPath: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  projectLink: PropTypes.string
+  name: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  link: PropTypes.string
 };
 
 function Projects() {
@@ -26,11 +33,14 @@ function Projects() {
       <div className="container margin-vert--lg">
         <div className="row">
           <div className="col col--8 col--offset-2">
-            <Card
-              imgPath="img/theplayground.png"
-              text="The Playground"
-              projectLink="https://vietduc01100001.tech/theplayground"
-            />
+            {projectList.map((project, i) => (
+              <Card
+                key={i}
+                name={project.name}
+                img={project.img}
+                link={project.link}
+              />
+            ))}
           </div>
         </div>
       </div>
