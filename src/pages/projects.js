@@ -6,7 +6,7 @@ import styles from '../css/projects.module.css';
 const projectList = [{
   name: 'The Playground',
   img: 'img/theplayground.png',
-  link: 'https://vietduc01100001.tech/theplayground'
+  link: 'https://theplayground.vietduc01100001.tech/'
 }];
 
 function Card({ name, img, link }) {
