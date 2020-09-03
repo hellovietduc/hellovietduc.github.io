@@ -13,7 +13,7 @@ module.exports = {
         alt: 'logo',
         src: 'img/logo.png'
       },
-      links: [
+      items: [
         {
           to: 'projects',
           label: 'Projects',
@@ -54,6 +54,7 @@ module.exports = {
     [
       '@docusaurus/preset-classic',
       {
+        docs: false,
         blog: {
           path: './blog',
           routeBasePath: '/',

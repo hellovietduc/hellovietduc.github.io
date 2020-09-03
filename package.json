@@ -1,6 +1,6 @@
 {
-  "name": "vietduc-01100001-github-io",
-  "version": "0.0.0",
+  "name": "vietduc01100001.github.io",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "docusaurus start",
@@ -21,13 +21,13 @@
     ]
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.58",
-    "@docusaurus/plugin-ideal-image": "^2.0.0-alpha.39",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.58",
+    "@docusaurus/core": "^2.0.0-alpha.63",
+    "@docusaurus/plugin-ideal-image": "^2.0.0-alpha.63",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.63",
     "clsx": "^1.1.1",
     "prop-types": "^15.7.2",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@vietduc/eslint-config": "^1.0.4",
