@@ -1,49 +1,60 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Layout from '@theme/Layout';
+import Image from '@theme/IdealImage';
+import clsx from 'clsx';
 import styles from './projects.module.css';
-
-const projectList = [{
-  name: 'The Playground',
-  img: 'img/theplayground.png',
-  link: 'https://theplayground.vietduc01100001.tech/'
-}];
-
-function Card({ name, img, link }) {
-  const goToProject = () => {
-    window.open(link);
-  };
-  return (
-    <div className={styles.projectCard} onClick={link ? goToProject : () => { }}>
-      <img src={img} />
-      <div className={styles.noselect}>{name}</div>
-    </div>
-  );
-}
-
-Card.propTypes = {
-  name: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
-  link: PropTypes.string
-};
+import projects from '../../data';
 
 function Projects() {
   return (
     <Layout title="Projects">
-      <div className="container margin-vert--lg">
+      <main className="container margin-vert--lg">
         <div className="row">
-          <div className="col col--8 col--offset-2">
-            {projectList.map((project, i) => (
-              <Card
-                key={i}
-                name={project.name}
-                img={project.img}
-                link={project.link}
-              />
-            ))}
-          </div>
+          {projects.map(project => (
+            <div key={project.name} className="col col--4 margin-bottom--lg">
+              <div className={clsx('card', styles.project)}>
+                <div className="card__image">
+                  <Image img={project.preview} alt={project.name} />
+                </div>
+                <div className="card__body">
+                  <div className="avatar">
+                    <div className="avatar__intro margin-left--none">
+                      <h4 className="avatar__name">{project.name}</h4>
+                      <small className="avatar__subtitle">
+                        {project.description}
+                      </small>
+                    </div>
+                  </div>
+                </div>
+                {(project.website || project.source) && (
+                  <div className="card__footer">
+                    <div className="button-group button-group--block">
+                      {project.website && (
+                        <a
+                          className="button button--small button--secondary button--block"
+                          href={project.website}
+                          target="_blank"
+                          rel="noreferrer noopener">
+                          Website
+                        </a>
+                      )}
+                      {project.source && (
+                        <a
+                          className="button button--small button--secondary button--block"
+                          href={project.source}
+                          target="_blank"
+                          rel="noreferrer noopener">
+                          Source
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
+      </main>
     </Layout>
   );
 }
