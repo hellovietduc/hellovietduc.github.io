@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Layout from '@theme/Layout';
-import styles from '../css/projects.module.css';
+import styles from './projects.module.css';
 
 const projectList = [{
   name: 'The Playground',

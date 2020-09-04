@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
-import styles from '../css/about.module.css';
+import styles from './about.module.css';
 
 function About() {
   return (
