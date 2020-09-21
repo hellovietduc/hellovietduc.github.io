@@ -14,14 +14,14 @@ const projects = [
     description: 'A code playground website using Docker power 🔥 to run multiple programming languages',
     preview: require('./preview/theplayground.png'),
     source: 'https://github.com/hellovietduc/theplayground',
-    website: 'https://theplayground.hellovietduc.tech'
+    website: 'https://playground.duc-nguyen.xyz'
   },
   {
     name: 'Envidict',
     description: 'A lightning-fast ⚡ English-Vietnamese dictionary website',
     preview: require('./preview/envidict.png'),
     source: 'https://github.com/hellovietduc/envidict',
-    website: 'https://envidict.hellovietduc.tech'
+    website: 'https://envidict.duc-nguyen.xyz'
   },
   {
     name: 'web-crawler',
