@@ -8,36 +8,42 @@ const getRandom404Image = () => {
   return require(`./preview/404/${rand}.png`);
 };
 
-const projects = [{
-  name: 'The Playground',
-  description: 'A code playground website using Docker power 🔥 to run multiple programming languages',
-  preview: require('./preview/theplayground.png'),
-  source: 'https://github.com/vietduc01100001/theplayground',
-  website: 'https://theplayground.vietduc01100001.tech'
-}, {
-  name: 'Envidict',
-  description: 'A lightning-fast ⚡ English-Vietnamese dictionary website',
-  preview: require('./preview/envidict.png'),
-  source: 'https://github.com/vietduc01100001/envidict',
-  website: 'https://envidict.vietduc01100001.tech'
-}, {
-  name: 'web-crawler',
-  description: 'A program that crawls text data from a website at any depth level',
-  preview: getRandom404Image(),
-  source: 'https://github.com/vietduc01100001/web-crawler',
-  website: 'https://github.com/vietduc01100001/web-crawler/releases'
-}, {
-  name: 'gomoku-cli',
-  description: 'Play Gomoku in command line',
-  preview: getRandom404Image(),
-  source: 'https://github.com/vietduc01100001/gomoku-cli',
-  website: 'https://github.com/vietduc01100001/gomoku-cli/releases'
-}, {
-  name: 'video-converter-web',
-  description: 'A video converter website',
-  preview: getRandom404Image(),
-  source: 'https://github.com/vietduc01100001/video-converter-web',
-  website: 'https://github.com/vietduc01100001/video-converter-web/releases'
-}];
+const projects = [
+  {
+    name: 'The Playground',
+    description: 'A code playground website using Docker power 🔥 to run multiple programming languages',
+    preview: require('./preview/theplayground.png'),
+    source: 'https://github.com/hellovietduc/theplayground',
+    website: 'https://theplayground.hellovietduc.tech'
+  },
+  {
+    name: 'Envidict',
+    description: 'A lightning-fast ⚡ English-Vietnamese dictionary website',
+    preview: require('./preview/envidict.png'),
+    source: 'https://github.com/hellovietduc/envidict',
+    website: 'https://envidict.hellovietduc.tech'
+  },
+  {
+    name: 'web-crawler',
+    description: 'A program that crawls text data from a website at any depth level',
+    preview: getRandom404Image(),
+    source: 'https://github.com/hellovietduc/web-crawler',
+    website: 'https://github.com/hellovietduc/web-crawler/releases'
+  },
+  {
+    name: 'gomoku-cli',
+    description: 'Play Gomoku in command line',
+    preview: getRandom404Image(),
+    source: 'https://github.com/hellovietduc/gomoku-cli',
+    website: 'https://github.com/hellovietduc/gomoku-cli/releases'
+  },
+  {
+    name: 'video-converter-web',
+    description: 'A video converter website',
+    preview: getRandom404Image(),
+    source: 'https://github.com/hellovietduc/video-converter-web',
+    website: 'https://github.com/hellovietduc/video-converter-web/releases'
+  }
+];
 
 export default projects;

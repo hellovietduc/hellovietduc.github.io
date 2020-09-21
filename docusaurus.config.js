@@ -1,14 +1,14 @@
 module.exports = {
-  title: 'vietduc01100001',
+  title: 'Duc Nguyen',
   tagline: 'The drafts in my mind',
-  url: 'https://vietduc01100001.github.io',
+  url: 'https://hellovietduc.github.io',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'vietduc01100001',
-  projectName: 'vietduc01100001.github.io',
+  organizationName: 'hellovietduc',
+  projectName: 'hellovietduc.github.io',
   themeConfig: {
     navbar: {
-      title: 'vietduc01100001',
+      title: 'Duc Nguyen',
       logo: {
         alt: 'logo',
         src: 'img/logo.png'
@@ -30,15 +30,15 @@ module.exports = {
           items: [
             {
               label: 'LinkedIn',
-              href: 'https://www.linkedin.com/in/vietduc01100001'
+              href: 'https://www.linkedin.com/in/hellovietduc'
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/vietduc01100001'
+              href: 'https://github.com/hellovietduc'
             },
             {
               label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/users/8943850/duc-nguyen'
+              href: 'https://stackoverflow.com/users/8943850'
             }
           ]
         }
@@ -47,7 +47,7 @@ module.exports = {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} vietduc01100001`
+      copyright: `Copyright © ${new Date().getFullYear()} Duc Nguyen`
     }
   },
   presets: [
@@ -61,7 +61,7 @@ module.exports = {
           showReadingTime: true,
           feedOptions: {
             type: 'all',
-            copyright: `Copyright © ${new Date().getFullYear()} vietduc01100001`
+            copyright: `Copyright © ${new Date().getFullYear()} Duc Nguyen`
           }
         },
         theme: {
