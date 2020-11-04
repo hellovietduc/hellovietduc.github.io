@@ -3,7 +3,7 @@ module.exports = {
   tagline: 'The drafts in my mind',
   url: 'https://hellovietduc.github.io',
   baseUrl: '/',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
   organizationName: 'hellovietduc',
   projectName: 'hellovietduc.github.io',
   themeConfig: {
@@ -11,7 +11,7 @@ module.exports = {
       title: 'Duc Nguyen',
       logo: {
         alt: 'logo',
-        src: 'img/logo.png'
+        src: 'img/logo32.webp'
       },
       items: [
         {
