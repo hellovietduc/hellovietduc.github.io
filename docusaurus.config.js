@@ -9,10 +9,6 @@ module.exports = {
   themeConfig: {
     navbar: {
       title: 'Duc Nguyen',
-      logo: {
-        alt: 'logo',
-        src: 'img/logo32.webp'
-      },
       items: [
         {
           to: 'projects',
