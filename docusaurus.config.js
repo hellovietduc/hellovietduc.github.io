@@ -18,7 +18,7 @@ module.exports = {
         {
           to: 'about',
           label: 'About me',
-          position: 'right'
+          position: 'left'
         },
         {
           label: 'Links',
@@ -35,6 +35,20 @@ module.exports = {
             {
               label: 'Stack Overflow',
               href: 'https://stackoverflow.com/users/8943850'
+            }
+          ]
+        },
+        {
+          label: 'Feeds',
+          position: 'right',
+          items: [
+            {
+              label: 'RSS',
+              href: '/rss.xml'
+            },
+            {
+              label: 'Atom',
+              href: '/atom.xml'
             }
           ]
         }
