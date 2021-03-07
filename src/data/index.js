@@ -2,7 +2,7 @@
 /* eslint-disable import/no-dynamic-require */
 
 const GITHUB_URL = 'https://github.com/hellovietduc';
-const NUMBER_OF_404_IMG = 23;
+const NUMBER_OF_404_IMG = 10;
 
 const getRandom404Image = () => {
   const rand = Math.floor(Math.random() * (NUMBER_OF_404_IMG)) + 1;
