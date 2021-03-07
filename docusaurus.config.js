@@ -3,7 +3,7 @@ module.exports = {
   tagline: 'The drafts in my mind',
   url: 'https://hellovietduc.github.io',
   baseUrl: '/',
-  favicon: 'img/favicon.png',
+  favicon: '/img/favicon.png',
   organizationName: 'hellovietduc',
   projectName: 'hellovietduc.github.io',
   themeConfig: {

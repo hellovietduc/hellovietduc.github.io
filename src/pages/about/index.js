@@ -10,7 +10,7 @@ function About() {
           <div className="col col--8 col--offset-2">
             <div className={styles.profile}>
               <img
-                src="img/logo400.webp"
+                src="/img/logo400.webp"
                 alt="hellovietduc"
                 className={styles.circleImage}
               />
