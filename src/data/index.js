@@ -11,6 +11,13 @@ const getRandom404Image = () => {
 
 const projects = [
   {
+    name: 'github-alfred',
+    description: 'Nagivate GitHub within Alfred',
+    preview: require('./preview/github-alfred.png'),
+    source: `${GITHUB_URL}/github-alfred`,
+    website: `${GITHUB_URL}/github-alfred`
+  },
+  {
     name: 'The Playground',
     description: 'A code playground website using Docker power 🔥 to run multiple programming languages',
     preview: require('./preview/theplayground.png'),
