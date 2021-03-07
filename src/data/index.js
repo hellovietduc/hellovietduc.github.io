@@ -6,28 +6,28 @@ const NUMBER_OF_404_IMG = 10;
 
 const getRandom404Image = () => {
   const rand = Math.floor(Math.random() * (NUMBER_OF_404_IMG)) + 1;
-  return require(`./preview/404/${rand}.png`);
+  return require(`./previews/404/${rand}.png`);
 };
 
 const projects = [
   {
     name: 'github-alfred',
     description: 'Nagivate GitHub within Alfred',
-    preview: require('./preview/projects/github-alfred.png'),
+    preview: require('./previews/projects/github-alfred.png'),
     source: `${GITHUB_URL}/github-alfred`,
     website: `${GITHUB_URL}/github-alfred`
   },
   {
     name: 'The Playground',
     description: 'A code playground website using Docker power 🔥 to run multiple programming languages',
-    preview: require('./preview/projects/theplayground.png'),
+    preview: require('./previews/projects/theplayground.png'),
     source: `${GITHUB_URL}/theplayground`,
     website: `${GITHUB_URL}/theplayground`
   },
   {
     name: 'Envidict',
     description: 'A lightning-fast ⚡ English-Vietnamese dictionary website',
-    preview: require('./preview/projects/envidict.png'),
+    preview: require('./previews/projects/envidict.png'),
     source: `${GITHUB_URL}/envidict`,
     website: `${GITHUB_URL}/envidict`
   },
