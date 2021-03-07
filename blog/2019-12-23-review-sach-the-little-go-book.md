@@ -16,7 +16,7 @@ Một số thông tin về cuốn sách:
 - Số trang: 83
 - Link đọc: [https://www.openmymind.net/assets/go/go.pdf](https://www.openmymind.net/assets/go/go.pdf)
 
-# 1
+## 1
 
 **"Go is a compiled, statically typed language with a C-like syntax and garbage collection."**
 
@@ -29,7 +29,7 @@ Từ câu mở đầu Chương 1 trên có thể suy ra vài thứ:
 
 Chương 1 giới thiệu ngắn gọn một số đặc điểm của Go và một số điểm khác biệt về import, khai báo biến. Đọc rất trôi và không bị choáng ngợp như những bài tutorials liệt kê tất cả các kiểu dữ liệu hoặc những bài lặp lại những cấu trúc if else, for loop mà ngôn ngữ nào cũng có.
 
-# 2
+## 2
 
 Chương 2 giới thiệu về structure trong Go. Go không phải là ngôn ngữ OOP, không có inheritance, polymorphism hay overloading. Chỉ cần structure thôi là đủ. Structure trong Go cũng hỗ trợ method và composition nên thực ra cũng khá dễ làm quen.
 
@@ -37,7 +37,7 @@ Một điểm giống JavaScript là các fields trong structure có thể có b
 
 À nữa, Go có pointer, và mặc định là pass-by-value nên bạn sẽ rơi vào cuộc chiến *"nên dùng value hay pointer đây"*.
 
-# 3
+## 3
 
 Array trong Go giống hệt như trong C, có độ dài fix cứng khi khai báo và không thể tự mở rộng thêm. Đọc tới đây thì khá là buồn, tuy nhiên Go thì không low-tech như C nên chúng ta được giới thiệu tới khái niệm ***slice***.
 
@@ -47,7 +47,7 @@ Chúng ta chỉ thao tác được với các phần tử mà slice biểu diễ
 
 Map trong Go là một cấu trúc dữ liệu kiểu dạng key-value, khá cơ bản. Key và value có thể là bất kì kiểu dữ liệu nào. Map tự mở rộng được, nhưng nên hạn chế điều này nếu chúng ta biết trước được số lượng key mà Map sẽ chứa. Key-value của map khi trong vòng lặp sẽ có thứ tự random, không cố định.
 
-# 4
+## 4
 
 Code trong Go được tổ chức theo package với root là `$GOPATH/src/`. Ở đầu file ta dùng keyword `package` để đặt cho nó một cái tên, khi `import` thì dùng complete path tính từ root. Go không cho phép việc 2 package import lẫn nhau (A import B và B import A). Để giải quyết điều này thì chúng ta phải tổ chức code cho tốt, tách phần code dùng chung ra các sub package con để import.
 
@@ -55,7 +55,7 @@ Go cũng hỗ trợ việc public/private biến và hàm được export bởi 
 
 Trong Go có interface giống một số ngôn ngữ OOP khác. Tuy nhiên cú pháp định nghĩa một struct implement một interface được lược giản đi, và struct đó phải implement hết các method của interface. Struct cũng có thể implement nhiều interface cùng lúc. Một điểm thú vị là ta có thể viết một hàm nhận param là một empty interface: `interface{}`. Lúc này hàm sẽ nhận param với bất kì kiểu dữ liệu nào, vì tất cả các kiểu dữ liệu đều implement empty interface.
 
-# 5
+## 5
 
 Chương 5 giới thiệu về những phần cơ bản còn lại của Go mà chưa được nhắc tới. Tiêu biểu có một số phần khá hay như:
 
@@ -64,7 +64,7 @@ Chương 5 giới thiệu về những phần cơ bản còn lại của Go mà 
 - Empty interface & conversions: Ở các ngôn ngữ OOP, thường sẽ có 1 base class (như `Object` trong Java) là superclass của mọi class khác. Go không có class, nhưng vẫn có một khái niệm là empty interface, là interface mà không có method nào. Mọi kiểu dữ liệu đều ngẫu nhiên implement interface này. Từ đó ta có thể viết hàm nhận và trả về biến có kiểu dữ liệu dynamic là empty interface này.
 - Function type: Function trong Go cũng là first-class type (Yes!!! Giống JavaScript). Điều này có nghĩa là ta có thể truyền function vào một function khác và trả về function từ một function.
 
-# 6
+## 6
 
 Chương cuối của cuốn sách, ***Concurrency***, giới thiệu hết sức cơ bản về concurrent programming với Go. Vì vậy mặc dù nắm bắt syntax thì nhanh nhưng những gì cuốn sách mang lại vẫn chưa làm mình thỏa mãn. Mình đã tìm đọc kha khá bài về concurrency trong Go, và bắt đầu thấy cả thuật ngữ *parallelism*.
 

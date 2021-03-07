@@ -1,6 +1,6 @@
 ---
 title: Conditional không cần if else hoặc switch trong JavaScript
-tags: [JavaScript]
+tags: [javascript]
 ---
 
 Một bài note nhanh và ngắn chia sẻ về sự hay ho của JavaScript. Mới đây mình gặp một tình huống nho nhỏ như sau.
