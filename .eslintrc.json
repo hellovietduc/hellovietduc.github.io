@@ -23,6 +23,7 @@
           "^@theme"
         ]
       }
-    ]
+    ],
+    "import/prefer-default-export": "off"
   }
 }

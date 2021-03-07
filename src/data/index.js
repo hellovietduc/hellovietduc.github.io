@@ -13,21 +13,21 @@ const projects = [
   {
     name: 'github-alfred',
     description: 'Nagivate GitHub within Alfred',
-    preview: require('./preview/github-alfred.png'),
+    preview: require('./preview/projects/github-alfred.png'),
     source: `${GITHUB_URL}/github-alfred`,
     website: `${GITHUB_URL}/github-alfred`
   },
   {
     name: 'The Playground',
     description: 'A code playground website using Docker power 🔥 to run multiple programming languages',
-    preview: require('./preview/theplayground.png'),
+    preview: require('./preview/projects/theplayground.png'),
     source: `${GITHUB_URL}/theplayground`,
     website: `${GITHUB_URL}/theplayground`
   },
   {
     name: 'Envidict',
     description: 'A lightning-fast ⚡ English-Vietnamese dictionary website',
-    preview: require('./preview/envidict.png'),
+    preview: require('./preview/projects/envidict.png'),
     source: `${GITHUB_URL}/envidict`,
     website: `${GITHUB_URL}/envidict`
   },
@@ -54,4 +54,4 @@ const projects = [
   }
 ];
 
-export default projects;
+export { projects };

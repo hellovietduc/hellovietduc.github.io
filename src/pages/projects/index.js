@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 import Image from '@theme/IdealImage';
 import clsx from 'clsx';
 import styles from './projects.module.css';
-import projects from '../../data';
+import { projects } from '../../data';
 
 function Projects() {
   return (
