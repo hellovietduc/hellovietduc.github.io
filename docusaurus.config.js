@@ -69,6 +69,7 @@ module.exports = {
           path: './blog',
           routeBasePath: '/',
           showReadingTime: true,
+          blogSidebarCount: 0,
           feedOptions: {
             type: 'all',
             copyright: `Copyright © ${new Date().getFullYear()} Duc Nguyen`
