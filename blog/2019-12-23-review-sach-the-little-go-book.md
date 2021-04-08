@@ -1,6 +1,7 @@
 ---
 title: Review sách The Little Go Book
 tags: [book review, go]
+image: ./assets/2019-12-23-review-sach-the-little-go-book/thumbnail.jpg
 ---
 
 Một chút review về cuốn sách dành cho Go beginner như mình.

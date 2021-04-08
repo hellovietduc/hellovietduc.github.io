@@ -1,6 +1,7 @@
 ---
 title: Conditional không cần if else hoặc switch trong JavaScript
 tags: [javascript]
+image: ./assets/2020-09-01-conditional-khong-can-if-else-hoac-switch-trong-javascript/thumbnail.png
 ---
 
 Một bài note nhanh và ngắn chia sẻ về sự hay ho của JavaScript. Mới đây mình gặp một tình huống nho nhỏ như sau.

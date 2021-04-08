@@ -1,6 +1,7 @@
 ---
 title: 10 bài viết hay nhất mình đọc trong năm 2019
 tags: [top 10]
+image: ./assets/2019-12-24-10-bai-viet-hay-nhat-minh-doc-trong-nam-2019/thumbnail.png
 ---
 
 Sắp hết năm 2019, mình tổng hợp lại 10 bài viết hay nhất mà mình đọc được trong năm nay.

@@ -1,6 +1,7 @@
 ---
 title: delete vs gán bằng undefined trong JavaScript
 tags: [javascript]
+image: ./assets/2019-11-27-delete-vs-gan-bang-undefined-trong-javascript/thumbnail.png
 ---
 
 Đã bao giờ bạn xóa một property khỏi object trong JavaScript chưa? Bạn sử dụng cách nào? Bạn có muốn biết sự khác biệt giữa những cách đó? Bài viết này sẽ giúp bạn giải thích những thắc mắc trên.
