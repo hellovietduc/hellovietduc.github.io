@@ -19,15 +19,17 @@ module.exports = {
           to: 'about',
           label: 'About me',
           position: 'left'
-        },
+        }
+      ],
+      hideOnScroll: true
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {},
         {
-          label: 'Links',
-          position: 'right',
+          title: 'Professional',
           items: [
-            {
-              label: 'LinkedIn',
-              href: 'https://www.linkedin.com/in/hellovietduc'
-            },
             {
               label: 'GitHub',
               href: 'https://github.com/hellovietduc'
@@ -35,12 +37,15 @@ module.exports = {
             {
               label: 'Stack Overflow',
               href: 'https://stackoverflow.com/users/8943850'
+            },
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/hellovietduc'
             }
           ]
         },
         {
-          label: 'Feeds',
-          position: 'right',
+          title: 'Feeds',
           items: [
             {
               label: 'RSS',
@@ -51,12 +56,9 @@ module.exports = {
               href: '/atom.xml'
             }
           ]
-        }
+        },
+        {}
       ],
-      hideOnScroll: true
-    },
-    footer: {
-      style: 'dark',
       copyright: `Copyright © ${new Date().getFullYear()} Duc Nguyen`
     }
   },
