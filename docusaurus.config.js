@@ -19,6 +19,12 @@ module.exports = {
           to: 'about',
           label: 'About me',
           position: 'left'
+        },
+        {
+          href: 'https://github.com/hellovietduc',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub'
         }
       ],
       hideOnScroll: true
