@@ -1,6 +1,6 @@
 ---
 title: Adaptive bitrate streaming
-tags: [streaming media systems]
+tags: [media, streaming]
 image: ./assets/adaptive-bitrate-streaming/thumbnail.png
 ---
 

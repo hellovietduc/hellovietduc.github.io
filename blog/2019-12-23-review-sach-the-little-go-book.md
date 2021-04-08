@@ -1,6 +1,6 @@
 ---
 title: Review sách The Little Go Book
-tags: [go, books]
+tags: [book review, go]
 ---
 
 Một chút review về cuốn sách dành cho Go beginner như mình.

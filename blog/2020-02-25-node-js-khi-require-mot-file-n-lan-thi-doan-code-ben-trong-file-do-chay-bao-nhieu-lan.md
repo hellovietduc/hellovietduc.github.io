@@ -1,6 +1,6 @@
 ---
 title: "[Node.js] Khi require một file n lần, thì đoạn code bên trong file đó chạy bao nhiêu lần?"
-tags: [node.js, jest]
+tags: [jest, node.js]
 ---
 
 Hôm nay cuối sprint, đang hoàn thành nốt cái coverage test cho đúng hạn thì mình gặp phải tình huống như thế này.

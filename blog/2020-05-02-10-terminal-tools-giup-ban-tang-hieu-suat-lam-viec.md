@@ -1,6 +1,6 @@
 ---
 title: 10 terminal tools giúp bạn tăng hiệu suất làm việc
-tags: [top 10, terminal]
+tags: [terminal, tools, top 10]
 ---
 
 Bạn có sử dụng terminal hàng ngày không? Bạn có thường xuyên cảm thấy gõ lệnh trên terminal thật chán và hay chuyển sang tìm các GUI apps để thay thế? Đó là vì bạn chưa tìm ra những tools thú vị giúp việc thao tác trên terminal trở nên ngầu lòi, nhanh chóng và hiệu quả hơn các GUI apps nhiều lần.
