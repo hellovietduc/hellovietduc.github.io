@@ -73,7 +73,9 @@ module.exports = {
           feedOptions: {
             type: 'all',
             copyright: `Copyright © ${new Date().getFullYear()} Duc Nguyen`
-          }
+          },
+          blogTitle: 'Duc Nguyen',
+          blogDescription: 'The drafts in my mind'
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css')
