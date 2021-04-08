@@ -1,6 +1,66 @@
+const BLOG_NAME = 'Duc Nguyen';
+const BLOG_DESCRIPTION = 'The drafts in my mind';
+const COPYRIGHT = `Copyright © ${new Date().getFullYear()} ${BLOG_NAME}`;
+
+const GITHUB_URL = 'https://github.com/hellovietduc';
+const STACK_OVERFLOW_URL = 'https://stackoverflow.com/users/8943850';
+const LINKEDIN_URL = 'https://www.linkedin.com/in/hellovietduc';
+
+const navBarItems = [
+  {
+    to: 'projects',
+    label: 'Projects',
+    position: 'left'
+  },
+  {
+    to: 'about',
+    label: 'About me',
+    position: 'left'
+  },
+  {
+    href: GITHUB_URL,
+    position: 'right',
+    className: 'header-github-link',
+    'aria-label': 'GitHub'
+  }
+];
+
+const footerLinks = [
+  {
+    title: 'Professional',
+    items: [
+      {
+        label: 'GitHub',
+        href: GITHUB_URL
+      },
+      {
+        label: 'Stack Overflow',
+        href: STACK_OVERFLOW_URL
+      },
+      {
+        label: 'LinkedIn',
+        href: LINKEDIN_URL
+      }
+    ]
+  },
+  {
+    title: 'Feeds',
+    items: [
+      {
+        label: 'RSS',
+        href: '/rss.xml'
+      },
+      {
+        label: 'Atom',
+        href: '/atom.xml'
+      }
+    ]
+  }
+];
+
 module.exports = {
-  title: 'Duc Nguyen',
-  tagline: 'The drafts in my mind',
+  title: BLOG_NAME,
+  tagline: BLOG_DESCRIPTION,
   url: 'https://hellovietduc.github.io',
   baseUrl: '/',
   favicon: '/img/favicon.png',
@@ -8,64 +68,14 @@ module.exports = {
   projectName: 'hellovietduc.github.io',
   themeConfig: {
     navbar: {
-      title: 'Duc Nguyen',
-      items: [
-        {
-          to: 'projects',
-          label: 'Projects',
-          position: 'left'
-        },
-        {
-          to: 'about',
-          label: 'About me',
-          position: 'left'
-        },
-        {
-          href: 'https://github.com/hellovietduc',
-          position: 'right',
-          className: 'header-github-link',
-          'aria-label': 'GitHub'
-        }
-      ],
+      title: BLOG_NAME,
+      items: navBarItems,
       hideOnScroll: true
     },
     footer: {
       style: 'dark',
-      links: [
-        {},
-        {
-          title: 'Professional',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/hellovietduc'
-            },
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/users/8943850'
-            },
-            {
-              label: 'LinkedIn',
-              href: 'https://www.linkedin.com/in/hellovietduc'
-            }
-          ]
-        },
-        {
-          title: 'Feeds',
-          items: [
-            {
-              label: 'RSS',
-              href: '/rss.xml'
-            },
-            {
-              label: 'Atom',
-              href: '/atom.xml'
-            }
-          ]
-        },
-        {}
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Duc Nguyen`
+      links: [{}, ...footerLinks, {}],
+      copyright: COPYRIGHT
     }
   },
   presets: [
@@ -80,10 +90,10 @@ module.exports = {
           blogSidebarCount: 0,
           feedOptions: {
             type: 'all',
-            copyright: `Copyright © ${new Date().getFullYear()} Duc Nguyen`
+            copyright: COPYRIGHT
           },
-          blogTitle: 'Duc Nguyen',
-          blogDescription: 'The drafts in my mind'
+          blogTitle: BLOG_NAME,
+          blogDescription: BLOG_DESCRIPTION
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css')
