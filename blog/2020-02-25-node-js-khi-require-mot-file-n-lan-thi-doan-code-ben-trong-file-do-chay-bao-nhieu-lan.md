@@ -1,7 +1,7 @@
 ---
 title: "[Node.js] Khi require một file n lần, thì đoạn code bên trong file đó chạy bao nhiêu lần?"
 tags: [jest, node.js]
-image: ./assets/2020-02-25-node-js-khi-require-mot-file-n-lan-thi-doan-code-ben-trong-file-do-chay-bao-nhieu-lan/thumbnail.png
+image: /thumbs/2020-02-25-node-js-khi-require-mot-file-n-lan-thi-doan-code-ben-trong-file-do-chay-bao-nhieu-lan.png
 ---
 
 Hôm nay cuối sprint, đang hoàn thành nốt cái coverage test cho đúng hạn thì mình gặp phải tình huống như thế này.

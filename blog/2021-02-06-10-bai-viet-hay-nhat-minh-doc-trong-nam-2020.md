@@ -1,7 +1,7 @@
 ---
 title: 10 bài viết hay nhất mình đọc trong năm 2020
 tags: [top 10]
-image: ./assets/2021-02-06-10-bai-viet-hay-nhat-minh-doc-trong-nam-2020/thumbnail.png
+image: /thumbs/2021-02-06-10-bai-viet-hay-nhat-minh-doc-trong-nam-2020.png
 ---
 
 Đến hẹn lại lên, mình tổng hợp 10 bài viết hay nhất mà mình đã đọc trong năm 2020.

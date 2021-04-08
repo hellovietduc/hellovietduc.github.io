@@ -1,7 +1,7 @@
 ---
 title: Adaptive bitrate streaming
 tags: [media, streaming]
-image: ./assets/2021-03-07-adaptive-bitrate-streaming/thumbnail.png
+image: /thumbs/2021-03-07-adaptive-bitrate-streaming.png
 ---
 
 What is adaptive bitrate streaming? How does it work? And what benefits does it offer?
