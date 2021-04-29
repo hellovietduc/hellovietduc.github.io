@@ -1,0 +1,18 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: monthly
+  open-pull-requests-limit: 10
+  reviewers:
+  - hellovietduc
+  labels:
+  - dependencies
+  ignore:
+  - dependency-name: eslint
+    versions:
+    - "> 7.23.0"
+  - dependency-name: eslint-plugin-react
+    versions:
+    - "> 7.23.1"
