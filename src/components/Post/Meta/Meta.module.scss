@@ -1,0 +1,27 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.meta {
+  font-style: italic;
+
+  &__divider {
+    margin: 0 5px;
+  }
+
+  &__category {
+    &-link {
+      font-size: $typographic-small-font-size;
+      color: $color-secondary;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      &:hover,
+      &:focus {
+        color: $color-primary;
+      }
+
+    }
+
+  }
+
+}

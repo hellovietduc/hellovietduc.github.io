@@ -1,8 +1,8 @@
 <div align="center">
     <h1>
-        <a href="https://duc-nguyen.xyz">duc-nguyen.xyz 💻</a>
+        <a href="https://duc-nguyen.xyz">Duc Nguyen's blog 💻</a>
     </h1>
     <p>
-        Built with <a href="https://v2.docusaurus.io">Docusaurus v2</a>
+        Based on <a href="https://github.com/alxshelepenok/gatsby-starter-lumen">gatsby-starter-lumen</a>
     </p>
 </div>
