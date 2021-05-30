@@ -1,0 +1,39 @@
+name: test
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '.github/workflows/tests.yml'
+      - 'gatsby/**'
+      - 'jest/**'
+      - 'src/**'
+      - 'static/**'
+      - 'config.js'
+      - 'gatsby-browser.js'
+      - 'gatsby-config.js'
+      - 'gatsby-node.js'
+      - 'package.json'
+      - 'postcss-config.js'
+      - 'yarn.lock'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install -g yarn
+    - run: yarn install --frozen-lockfile
+    - run: yarn run lint
+    - run: yarn run test --runInBand --no-cache
+      env:
+        CI: true
