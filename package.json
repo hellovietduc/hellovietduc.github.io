@@ -4,7 +4,8 @@
   "scripts": {
     "develop": "yarn clean && gatsby develop",
     "build": "yarn clean && gatsby build",
-    "deploy": "yarn clean && gatsby build --prefix-paths && gh-pages -d public -r git@github.com:hellovietduc/hellovietduc.github.io.git -b master",
+    "predeploy": "yarn clean && gatsby build --prefix-paths",
+    "deploy": "gh-pages -d public -r git@github.com:hellovietduc/hellovietduc.github.io.git -b master -m \"Deploy website - based on $(git log -n 1 --pretty=format:'%H' origin/develop)\"",
     "clean": "rimraf .cache public",
     "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx .",
     "lint:scss": "stylelint \"src/**/*.scss\"",
