@@ -1,12 +1,12 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { useStaticQuery, StaticQuery } from 'gatsby'
-import CategoriesListTemplate from './categories-list-template'
+import SeriesListTemplate from './categories-list-template'
 import siteMetadata from '../../jest/__fixtures__/site-metadata'
 import allMarkdownRemark from '../../jest/__fixtures__/all-markdown-remark'
 import type { RenderCallback } from '../types'
 
-describe('CategoriesListTemplate', () => {
+describe('SeriesListTemplate', () => {
   const props = {
     ...siteMetadata,
     ...allMarkdownRemark,
@@ -20,7 +20,7 @@ describe('CategoriesListTemplate', () => {
   })
 
   it('renders correctly', () => {
-    const tree = renderer.create(<CategoriesListTemplate />).toJSON()
+    const tree = renderer.create(<SeriesListTemplate />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

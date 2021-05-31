@@ -13,7 +13,7 @@ interface Props {
   pageContext: PageContext
 }
 
-const CategoryTemplate: React.FC<Props> = ({ data, pageContext }) => {
+const SeriesTemplate: React.FC<Props> = ({ data, pageContext }) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
 
   const { series, currentPage, prevPagePath, nextPagePath, hasPrevPage, hasNextPage } = pageContext
@@ -39,7 +39,7 @@ const CategoryTemplate: React.FC<Props> = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query CategoryPage($series: String, $postsLimit: Int!, $postsOffset: Int!) {
+  query SeriesPage($series: String, $postsLimit: Int!, $postsOffset: Int!) {
     allMarkdownRemark(
       limit: $postsLimit
       skip: $postsOffset
@@ -64,4 +64,4 @@ export const query = graphql`
   }
 `
 
-export default CategoryTemplate
+export default SeriesTemplate

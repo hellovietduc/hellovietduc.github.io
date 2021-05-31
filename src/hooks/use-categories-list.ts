@@ -1,12 +1,12 @@
 import { useStaticQuery, graphql } from 'gatsby'
 import type { Group } from '../types'
 
-type Categories = Group[]
+type SeriesList = Group[]
 
-const useCategoriesList = (): Categories => {
+const useSeriesList = (): SeriesList => {
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
-      query CategoriesListQuery {
+      query SeriesListQuery {
         allMarkdownRemark(filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }) {
           group(field: frontmatter___series) {
             fieldValue
@@ -20,4 +20,4 @@ const useCategoriesList = (): Categories => {
   return allMarkdownRemark.group
 }
 
-export default useCategoriesList
+export default useSeriesList

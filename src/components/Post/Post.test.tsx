@@ -19,7 +19,7 @@ describe('Post', () => {
       html: '<p>test</p>',
       fields: {
         slug: '/test',
-        seriesSlug: '/test-category',
+        seriesSlug: '/test-series',
         tagSlugs: ['/test_0', '/test_1'],
       },
       frontmatter: {

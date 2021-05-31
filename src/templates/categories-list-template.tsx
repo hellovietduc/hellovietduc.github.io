@@ -4,12 +4,12 @@ import kebabCase from 'lodash/kebabCase'
 import Sidebar from '../components/Sidebar'
 import Layout from '../components/Layout'
 import Page from '../components/Page'
-import { useSiteMetadata, useCategoriesList } from '../hooks'
+import { useSiteMetadata, useSeriesList } from '../hooks'
 import type { NoProps } from '../types'
 
-const CategoriesListTemplate: React.FC<NoProps> = () => {
+const SeriesListTemplate: React.FC<NoProps> = () => {
   const { title, subtitle } = useSiteMetadata()
-  const seriesList = useCategoriesList()
+  const seriesList = useSeriesList()
 
   return (
     <Layout title={`Series - ${title}`} description={subtitle}>
@@ -29,4 +29,4 @@ const CategoriesListTemplate: React.FC<NoProps> = () => {
   )
 }
 
-export default CategoriesListTemplate
+export default SeriesListTemplate
