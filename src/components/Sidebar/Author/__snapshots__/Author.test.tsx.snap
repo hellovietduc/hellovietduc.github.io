@@ -21,9 +21,7 @@ exports[`Author renders correctly 1`] = `
     <a
       className="author__title-link"
       href="/"
-    >
-      test
-    </a>
+    />
   </h2>
   <p
     className="author__subtitle"

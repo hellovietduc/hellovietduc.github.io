@@ -22,6 +22,7 @@ const useSiteMetadata = (): SiteMetadata => {
               path
             }
             url
+            name
             title
             subtitle
             copyright

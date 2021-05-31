@@ -4,11 +4,12 @@ import type { Author as AuthorProps } from '../../../types'
 import styles from './Author.module.scss'
 
 interface Props {
+  siteName: string
   author: AuthorProps
   isIndex?: boolean
 }
 
-const Author: React.FC<Props> = ({ author, isIndex }) => (
+const Author: React.FC<Props> = ({ siteName, author, isIndex }) => (
   <div className={styles['author']}>
     <Link to="/">
       <img
@@ -23,13 +24,13 @@ const Author: React.FC<Props> = ({ author, isIndex }) => (
     {isIndex === true ? (
       <h1 className={styles['author__title']}>
         <Link className={styles['author__title-link']} to="/">
-          {author.name}
+          {siteName}
         </Link>
       </h1>
     ) : (
       <h2 className={styles['author__title']}>
         <Link className={styles['author__title-link']} to="/">
-          {author.name}
+          {siteName}
         </Link>
       </h2>
     )}

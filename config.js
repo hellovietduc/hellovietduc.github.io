@@ -1,12 +1,13 @@
 module.exports = {
-  url: 'https://duc-nguyen.xyz',
+  url: 'https://duckwho.codes',
   pathPrefix: '/',
-  title: "Duc Nguyen's blog",
-  subtitle: 'Random stuff from a random guy who does software engineering.',
+  name: 'Duck Who Codes',
+  title: 'Duck Who Codes - Blog by Duc Nguyen',
+  subtitle: 'Blog by Duc Nguyen - Software Engineer. Making the world better with code.',
   author: {
     name: 'Duc Nguyen',
     photo: '/photo.jpg',
-    bio: 'Software Engineer @ Padlet. Making the world better with code.',
+    bio: 'Blog by Duc Nguyen - Software Engineer @ Padlet. Making the world better with code.',
     contacts: {
       email: 'hellovietduc21@gmail.com',
       linkedin: 'hellovietduc',
