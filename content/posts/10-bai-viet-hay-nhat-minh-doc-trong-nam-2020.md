@@ -6,7 +6,7 @@ draft: false
 date: 2021-02-06T04:30:00.000Z
 description: Đến hẹn lại lên, mình tổng hợp 10 bài viết hay nhất mà mình đã đọc
   trong năm 2020.
-category: General
+series: Top 10 posts of the year
 tags:
   - awesome
 ---

@@ -248,18 +248,20 @@ exports[`IndexTemplate renders correctly 1`] = `
               >
                 September 1, 2016
               </time>
-              <span
-                className="feed__item-meta-divider"
-              />
-              <span
-                className="feed__item-meta-category"
-              >
-                <a
-                  className="feed__item-meta-category-link"
-                  href="/test"
+              <span>
+                <span
+                  className="feed__item-meta-divider"
+                />
+                <span
+                  className="feed__item-meta-series"
                 >
-                  test
-                </a>
+                  <a
+                    className="feed__item-meta-series-link"
+                    href="/test"
+                  >
+                    test
+                  </a>
+                </span>
               </span>
             </div>
             <h2
@@ -296,18 +298,20 @@ exports[`IndexTemplate renders correctly 1`] = `
               >
                 September 1, 2016
               </time>
-              <span
-                className="feed__item-meta-divider"
-              />
-              <span
-                className="feed__item-meta-category"
-              >
-                <a
-                  className="feed__item-meta-category-link"
-                  href="/test"
+              <span>
+                <span
+                  className="feed__item-meta-divider"
+                />
+                <span
+                  className="feed__item-meta-series"
                 >
-                  test
-                </a>
+                  <a
+                    className="feed__item-meta-series-link"
+                    href="/test"
+                  >
+                    test
+                  </a>
+                </span>
               </span>
             </div>
             <h2

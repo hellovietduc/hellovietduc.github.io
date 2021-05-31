@@ -5,7 +5,7 @@ socialImage: /media/posts/exponential-backoff/thumb.png
 draft: false
 date: 2021-04-29T04:30:00.000Z
 description: What I learned about exponential backoff.
-category: Today I learned
+series: Today I learned
 tags:
   - algorithm
 ---

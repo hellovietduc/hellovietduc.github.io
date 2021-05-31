@@ -6,7 +6,6 @@ draft: false
 date: 2020-05-02T04:30:00.000Z
 description: 10 terminal tools giúp việc thao tác trên terminal trở nên ngầu
   lòi, nhanh chóng và hiệu quả.
-category: Tools
 tags:
   - terminal
 ---

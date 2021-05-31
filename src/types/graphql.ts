@@ -1,13 +1,13 @@
 export interface Node {
   fields: {
     slug: string
-    categorySlug: string
+    seriesSlug?: string
     tagSlugs?: string[]
   }
   frontmatter: {
     date: string
     description?: string
-    category: string
+    series?: string
     tags?: string[]
     title: string
     socialImage?: {

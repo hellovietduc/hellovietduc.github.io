@@ -32,7 +32,7 @@ export const query = graphql`
       html
       fields {
         slug
-        categorySlug
+        seriesSlug
         tagSlugs
       }
       frontmatter {
@@ -40,7 +40,7 @@ export const query = graphql`
         description
         tags
         title
-        category
+        series
         socialImage {
           publicURL
         }

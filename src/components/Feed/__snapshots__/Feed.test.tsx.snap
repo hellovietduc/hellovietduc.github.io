@@ -16,18 +16,20 @@ exports[`Feed renders correctly 1`] = `
       >
         September 1, 2016
       </time>
-      <span
-        className="feed__item-meta-divider"
-      />
-      <span
-        className="feed__item-meta-category"
-      >
-        <a
-          className="feed__item-meta-category-link"
-          href="/test_0"
+      <span>
+        <span
+          className="feed__item-meta-divider"
+        />
+        <span
+          className="feed__item-meta-series"
         >
-          test_0
-        </a>
+          <a
+            className="feed__item-meta-series-link"
+            href="/test_0"
+          >
+            test_0
+          </a>
+        </span>
       </span>
     </div>
     <h2
@@ -64,18 +66,20 @@ exports[`Feed renders correctly 1`] = `
       >
         September 1, 2016
       </time>
-      <span
-        className="feed__item-meta-divider"
-      />
-      <span
-        className="feed__item-meta-category"
-      >
-        <a
-          className="feed__item-meta-category-link"
-          href="/test_1"
+      <span>
+        <span
+          className="feed__item-meta-divider"
+        />
+        <span
+          className="feed__item-meta-series"
         >
-          test_1
-        </a>
+          <a
+            className="feed__item-meta-series-link"
+            href="/test_1"
+          >
+            test_1
+          </a>
+        </span>
       </span>
     </div>
     <h2

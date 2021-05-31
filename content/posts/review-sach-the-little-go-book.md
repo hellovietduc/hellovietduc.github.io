@@ -5,7 +5,7 @@ socialImage: /media/posts/review-sach-the-little-go-book/thumb.jpg
 draft: false
 date: 2019-12-23T04:30:00.000Z
 description: Một chút review về cuốn sách dành cho Go beginner như mình.
-category: Books
+series: Book reviews
 tags:
   - go
 ---
