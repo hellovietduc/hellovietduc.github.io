@@ -27,9 +27,7 @@ exports[`Sidebar renders correctly 1`] = `
         <a
           className="author__title-link"
           href="/"
-        >
-          Test name
-        </a>
+        />
       </h1>
       <p
         className="author__subtitle"

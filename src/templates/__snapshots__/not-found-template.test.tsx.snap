@@ -30,9 +30,7 @@ exports[`NotFoundTemplate renders correctly 1`] = `
           <a
             className="author__title-link"
             href="/"
-          >
-            Test name
-          </a>
+          />
         </h2>
         <p
           className="author__subtitle"
