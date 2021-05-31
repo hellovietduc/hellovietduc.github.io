@@ -7,7 +7,7 @@ export interface Node {
   frontmatter: {
     date: string
     description?: string
-    category: string
+    series?: string
     tags?: string[]
     title: string
     socialImage?: {

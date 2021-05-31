@@ -8,7 +8,7 @@ const useCategoriesList = (): Categories => {
     graphql`
       query CategoriesListQuery {
         allMarkdownRemark(filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }) {
-          group(field: frontmatter___category) {
+          group(field: frontmatter___series) {
             fieldValue
             totalCount
           }

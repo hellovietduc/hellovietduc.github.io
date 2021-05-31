@@ -1,6 +1,6 @@
 export interface PageContext {
   tag: string
-  category: string
+  series: string
   currentPage: number
   prevPagePath: string
   nextPagePath: string

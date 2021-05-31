@@ -9,17 +9,17 @@ import type { NoProps } from '../types'
 
 const CategoriesListTemplate: React.FC<NoProps> = () => {
   const { title, subtitle } = useSiteMetadata()
-  const categories = useCategoriesList()
+  const seriesList = useCategoriesList()
 
   return (
     <Layout title={`Series - ${title}`} description={subtitle}>
       <Sidebar />
       <Page title="Series">
         <ul>
-          {categories.map((category) => (
-            <li key={category.fieldValue}>
-              <Link to={`/series/${kebabCase(category.fieldValue)}/`}>
-                {category.fieldValue} ({category.totalCount})
+          {seriesList.map((series) => (
+            <li key={series.fieldValue}>
+              <Link to={`/series/${kebabCase(series.fieldValue)}/`}>
+                {series.fieldValue} ({series.totalCount})
               </Link>
             </li>
           ))}

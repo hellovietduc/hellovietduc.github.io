@@ -26,8 +26,8 @@ const onCreateNode = ({ node, actions, getNode }) => {
       createNodeField({ node, name: 'tagSlugs', value: tagSlugs })
     }
 
-    if (node.frontmatter.category) {
-      const seriesSlug = `/series/${_.kebabCase(node.frontmatter.category)}/`
+    if (node.frontmatter.series) {
+      const seriesSlug = `/series/${_.kebabCase(node.frontmatter.series)}/`
       createNodeField({ node, name: 'seriesSlug', value: seriesSlug })
     }
   }

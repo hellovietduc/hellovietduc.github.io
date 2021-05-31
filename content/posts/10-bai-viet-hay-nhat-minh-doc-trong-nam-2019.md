@@ -6,7 +6,7 @@ draft: false
 date: 2019-12-24T04:30:00.000Z
 description: Sắp hết năm 2019, mình tổng hợp lại 10 bài viết hay nhất mà mình
   đọc được trong năm nay.
-category: Top 10 posts of the year
+series: Top 10 posts of the year
 tags:
   - awesome
 ---

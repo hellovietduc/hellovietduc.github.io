@@ -16,15 +16,15 @@ interface Props {
 const CategoryTemplate: React.FC<Props> = ({ data, pageContext }) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
 
-  const { category, currentPage, prevPagePath, nextPagePath, hasPrevPage, hasNextPage } = pageContext
+  const { series, currentPage, prevPagePath, nextPagePath, hasPrevPage, hasNextPage } = pageContext
 
   const { edges } = data.allMarkdownRemark
-  const pageTitle = currentPage > 0 ? `${category} - Page ${currentPage} - ${siteTitle}` : `${category} - ${siteTitle}`
+  const pageTitle = currentPage > 0 ? `${series} - Page ${currentPage} - ${siteTitle}` : `${series} - ${siteTitle}`
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
       <Sidebar />
-      <Page title={`Series: ${category}`}>
+      <Page title={`Series: ${series}`}>
         <Feed edges={edges} />
         <Link to="/all-series">View all series</Link>
         <Pagination
@@ -39,11 +39,11 @@ const CategoryTemplate: React.FC<Props> = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query CategoryPage($category: String, $postsLimit: Int!, $postsOffset: Int!) {
+  query CategoryPage($series: String, $postsLimit: Int!, $postsOffset: Int!) {
     allMarkdownRemark(
       limit: $postsLimit
       skip: $postsOffset
-      filter: { frontmatter: { category: { eq: $category }, template: { eq: "post" }, draft: { ne: true } } }
+      filter: { frontmatter: { series: { eq: $series }, template: { eq: "post" }, draft: { ne: true } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
@@ -55,7 +55,7 @@ export const query = graphql`
           frontmatter {
             date
             description
-            category
+            series
             title
           }
         }

@@ -4,25 +4,25 @@ import { getReadableDate } from '../../../utils'
 import styles from './Meta.module.scss'
 
 interface Props {
-  category: string
+  series?: string
   seriesSlug?: string
   date: string
 }
 
 const dateFormat: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'short', day: 'numeric' }
 
-const Meta: React.FC<Props> = ({ category, seriesSlug, date }) => (
+const Meta: React.FC<Props> = ({ series, seriesSlug, date }) => (
   <div className={styles['meta']}>
     <p>
       <span>Published {getReadableDate(date, dateFormat)}</span>
-      {category && seriesSlug ? (
+      {series && seriesSlug ? (
         <span>
           <span className={styles['meta__divider']} />
           <span>in</span>
           <span className={styles['meta__divider']} />
           <span className={styles['meta__category']}>
             <Link to={seriesSlug} className={styles['meta__category-link']}>
-              {category}
+              {series}
             </Link>
           </span>
         </span>

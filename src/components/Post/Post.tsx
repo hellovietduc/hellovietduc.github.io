@@ -15,7 +15,7 @@ interface Props {
 const Post: React.FC<Props> = ({ post }) => {
   const { html } = post
   const { slug, seriesSlug, tagSlugs } = post.fields
-  const { title, category, date, tags } = post.frontmatter
+  const { title, series, date, tags } = post.frontmatter
 
   return (
     <div className={styles['post']}>
@@ -28,7 +28,7 @@ const Post: React.FC<Props> = ({ post }) => {
       </div>
 
       <div className={styles['post__footer']}>
-        <Meta category={category} seriesSlug={seriesSlug} date={date} />
+        <Meta series={series} seriesSlug={seriesSlug} date={date} />
         {tags && tagSlugs && <Tags tags={tags} tagSlugs={tagSlugs} />}
         <Author />
       </div>

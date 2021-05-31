@@ -40,7 +40,7 @@ export const query = graphql`
         description
         tags
         title
-        category
+        series
         socialImage {
           publicURL
         }

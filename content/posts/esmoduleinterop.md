@@ -5,7 +5,7 @@ socialImage: /media/posts/esmoduleinterop/thumb.png
 draft: false
 date: 2021-04-26T04:30:00.000Z
 description: What I learned about the esModuleInterop option in TypeScript.
-category: Today I learned
+series: Today I learned
 tags:
   - typescript
 ---
