@@ -24,7 +24,7 @@ module.exports = async (graphql, actions) => {
     for (let i = 0; i < numPages; i += 1) {
       createPage({
         path: i === 0 ? seriesSlug : `${seriesSlug}/page/${i}`,
-        component: path.resolve('./src/templates/category-template.tsx'),
+        component: path.resolve('./src/templates/series-template.tsx'),
         context: {
           series: series.fieldValue,
           currentPage: i,

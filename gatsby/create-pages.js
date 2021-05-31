@@ -1,6 +1,6 @@
 const path = require('path')
 const _ = require('lodash')
-const createSeriesPages = require('./pagination/create-categories-pages.js')
+const createSeriesPages = require('./pagination/create-series-pages.js')
 const createTagsPages = require('./pagination/create-tags-pages.js')
 const createPostsPages = require('./pagination/create-posts-pages.js')
 
@@ -22,7 +22,7 @@ const createPages = async ({ graphql, actions }) => {
   // Series list
   createPage({
     path: '/all-series',
-    component: path.resolve('./src/templates/categories-list-template.tsx'),
+    component: path.resolve('./src/templates/series-list-template.tsx'),
   })
 
   // Posts and pages from markdown
