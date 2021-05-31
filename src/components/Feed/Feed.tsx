@@ -24,12 +24,16 @@ const Feed: React.FC<Props> = ({ edges }) => (
             <time className={styles['feed__item-meta-time']} dateTime={publishedDate}>
               {publishedDate}
             </time>
-            <span className={styles['feed__item-meta-divider']} />
-            <span className={styles['feed__item-meta-category']}>
-              <Link to={edge.node.fields.categorySlug} className={styles['feed__item-meta-category-link']}>
-                {edge.node.frontmatter.category}
-              </Link>
-            </span>
+            {edge.node.fields.seriesSlug ? (
+              <span>
+                <span className={styles['feed__item-meta-divider']} />
+                <span className={styles['feed__item-meta-category']}>
+                  <Link to={edge.node.fields.seriesSlug} className={styles['feed__item-meta-category-link']}>
+                    {edge.node.frontmatter.category}
+                  </Link>
+                </span>
+              </span>
+            ) : null}
           </div>
           <h2 className={styles['feed__item-title']}>
             <Link className={styles['feed__item-title-link']} to={edge.node.fields.slug}>

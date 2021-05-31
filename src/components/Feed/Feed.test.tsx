@@ -9,7 +9,7 @@ describe('Feed', () => {
         node: {
           fields: {
             slug: '/test_0',
-            categorySlug: '/test_0',
+            seriesSlug: '/test_0',
             tagSlugs: ['/test-1', '/test-2'],
           },
           frontmatter: {
@@ -27,7 +27,7 @@ describe('Feed', () => {
         node: {
           fields: {
             slug: '/test_1',
-            categorySlug: '/test_1',
+            seriesSlug: '/test_1',
             tagSlugs: ['/test-1', '/test-2'],
           },
           frontmatter: {

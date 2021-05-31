@@ -1,7 +1,7 @@
 export interface Node {
   fields: {
     slug: string
-    categorySlug: string
+    seriesSlug?: string
     tagSlugs?: string[]
   }
   frontmatter: {

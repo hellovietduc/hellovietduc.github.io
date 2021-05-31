@@ -15,7 +15,7 @@ module.exports = {
         node: {
           fields: {
             slug: '/test_0',
-            categorySlug: '/test',
+            seriesSlug: '/test',
           },
           frontmatter: {
             date: '2016-09-01',
@@ -29,7 +29,7 @@ module.exports = {
         node: {
           fields: {
             slug: '/test_1',
-            categorySlug: '/test',
+            seriesSlug: '/test',
           },
           frontmatter: {
             date: '2016-09-01',

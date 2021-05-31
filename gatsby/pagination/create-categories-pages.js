@@ -19,19 +19,19 @@ module.exports = async (graphql, actions) => {
 
   _.each(result.data.allMarkdownRemark.group, (category) => {
     const numPages = Math.ceil(category.totalCount / postsPerPage)
-    const categorySlug = `/series/${_.kebabCase(category.fieldValue)}`
+    const seriesSlug = `/series/${_.kebabCase(category.fieldValue)}`
 
     for (let i = 0; i < numPages; i += 1) {
       createPage({
-        path: i === 0 ? categorySlug : `${categorySlug}/page/${i}`,
+        path: i === 0 ? seriesSlug : `${seriesSlug}/page/${i}`,
         component: path.resolve('./src/templates/category-template.tsx'),
         context: {
           category: category.fieldValue,
           currentPage: i,
           postsLimit: postsPerPage,
           postsOffset: i * postsPerPage,
-          prevPagePath: i <= 1 ? categorySlug : `${categorySlug}/page/${i - 1}`,
-          nextPagePath: `${categorySlug}/page/${i + 1}`,
+          prevPagePath: i <= 1 ? seriesSlug : `${seriesSlug}/page/${i - 1}`,
+          nextPagePath: `${seriesSlug}/page/${i + 1}`,
           hasPrevPage: i !== 0,
           hasNextPage: i !== numPages - 1,
         },
