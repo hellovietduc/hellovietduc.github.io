@@ -12,9 +12,9 @@ const CategoriesListTemplate: React.FC<NoProps> = () => {
   const categories = useCategoriesList()
 
   return (
-    <Layout title={`Categories - ${title}`} description={subtitle}>
+    <Layout title={`Series - ${title}`} description={subtitle}>
       <Sidebar />
-      <Page title="Categories">
+      <Page title="Series">
         <ul>
           {categories.map((category) => (
             <li key={category.fieldValue}>

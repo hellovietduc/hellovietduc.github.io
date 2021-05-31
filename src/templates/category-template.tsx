@@ -24,9 +24,9 @@ const CategoryTemplate: React.FC<Props> = ({ data, pageContext }) => {
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
       <Sidebar />
-      <Page title={`Category: ${category}`}>
+      <Page title={`Series: ${category}`}>
         <Feed edges={edges} />
-        <Link to="/categories">View all categories</Link>
+        <Link to="/categories">View all series</Link>
         <Pagination
           prevPagePath={prevPagePath}
           nextPagePath={nextPagePath}
