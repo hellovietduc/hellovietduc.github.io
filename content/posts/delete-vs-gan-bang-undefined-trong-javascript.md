@@ -7,7 +7,6 @@ date: 2019-11-27T04:30:00.000Z
 description: Đã bao giờ bạn xóa một property khỏi object trong JavaScript chưa?
   Bạn sử dụng cách nào? Bạn có muốn biết sự khác biệt giữa những cách đó? Bài
   viết này sẽ giúp bạn giải thích những thắc mắc trên.
-category: Knowledge
 tags:
   - javascript
 ---

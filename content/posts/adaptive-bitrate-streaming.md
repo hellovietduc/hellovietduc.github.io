@@ -6,7 +6,6 @@ draft: false
 date: 2021-03-07T04:30:00.000Z
 description: What is adaptive bitrate streaming? How does it work? And what
   benefits does it offer?
-category: Knowledge
 tags:
   - media
   - streaming

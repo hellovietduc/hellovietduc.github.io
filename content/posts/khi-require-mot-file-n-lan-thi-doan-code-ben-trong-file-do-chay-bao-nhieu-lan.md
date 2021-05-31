@@ -6,7 +6,6 @@ draft: false
 date: 2020-02-25T04:30:00.000Z
 description: Hôm nay cuối sprint, đang hoàn thành nốt cái coverage test cho đúng
   hạn thì mình gặp phải tình huống như thế này.
-category: Knowledge
 tags:
   - node.js
   - jest

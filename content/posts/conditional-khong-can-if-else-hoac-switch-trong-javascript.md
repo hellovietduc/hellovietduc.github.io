@@ -6,7 +6,6 @@ draft: false
 date: 2020-09-01T04:30:00.000Z
 description: Một bài note nhanh và ngắn chia sẻ về sự hay ho của JavaScript. Mới
   đây mình gặp một tình huống nho nhỏ như sau.
-category: Knowledge
 tags:
   - javascript
 ---
