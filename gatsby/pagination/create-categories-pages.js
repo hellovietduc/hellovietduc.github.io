@@ -19,7 +19,7 @@ module.exports = async (graphql, actions) => {
 
   _.each(result.data.allMarkdownRemark.group, (category) => {
     const numPages = Math.ceil(category.totalCount / postsPerPage)
-    const categorySlug = `/category/${_.kebabCase(category.fieldValue)}`
+    const categorySlug = `/series/${_.kebabCase(category.fieldValue)}`
 
     for (let i = 0; i < numPages; i += 1) {
       createPage({

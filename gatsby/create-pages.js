@@ -21,7 +21,7 @@ const createPages = async ({ graphql, actions }) => {
 
   // Categories list
   createPage({
-    path: '/categories',
+    path: '/all-series',
     component: path.resolve('./src/templates/categories-list-template.tsx'),
   })
 

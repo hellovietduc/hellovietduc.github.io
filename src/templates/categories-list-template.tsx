@@ -18,7 +18,7 @@ const CategoriesListTemplate: React.FC<NoProps> = () => {
         <ul>
           {categories.map((category) => (
             <li key={category.fieldValue}>
-              <Link to={`/category/${kebabCase(category.fieldValue)}/`}>
+              <Link to={`/series/${kebabCase(category.fieldValue)}/`}>
                 {category.fieldValue} ({category.totalCount})
               </Link>
             </li>
