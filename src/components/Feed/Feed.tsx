@@ -27,8 +27,8 @@ const Feed: React.FC<Props> = ({ edges }) => (
             {edge.node.frontmatter.series && edge.node.fields.seriesSlug ? (
               <span>
                 <span className={styles['feed__item-meta-divider']} />
-                <span className={styles['feed__item-meta-category']}>
-                  <Link to={edge.node.fields.seriesSlug} className={styles['feed__item-meta-category-link']}>
+                <span className={styles['feed__item-meta-series']}>
+                  <Link to={edge.node.fields.seriesSlug} className={styles['feed__item-meta-series-link']}>
                     {edge.node.frontmatter.series}
                   </Link>
                 </span>

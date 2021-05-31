@@ -20,8 +20,8 @@ const Meta: React.FC<Props> = ({ series, seriesSlug, date }) => (
           <span className={styles['meta__divider']} />
           <span>in</span>
           <span className={styles['meta__divider']} />
-          <span className={styles['meta__category']}>
-            <Link to={seriesSlug} className={styles['meta__category-link']}>
+          <span className={styles['meta__series']}>
+            <Link to={seriesSlug} className={styles['meta__series-link']}>
               {series}
             </Link>
           </span>
