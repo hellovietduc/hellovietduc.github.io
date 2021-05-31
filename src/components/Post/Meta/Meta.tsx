@@ -15,14 +15,18 @@ const Meta: React.FC<Props> = ({ category, categorySlug, date }) => (
   <div className={styles['meta']}>
     <p>
       <span>Published {getReadableDate(date, dateFormat)}</span>
-      <span className={styles['meta__divider']} />
-      <span>in</span>
-      <span className={styles['meta__divider']} />
-      <span className={styles['meta__category']}>
-        <Link to={categorySlug} className={styles['meta__category-link']}>
-          {category}
-        </Link>
-      </span>
+      {category && categorySlug ? (
+        <span>
+          <span className={styles['meta__divider']} />
+          <span>in</span>
+          <span className={styles['meta__divider']} />
+          <span className={styles['meta__category']}>
+            <Link to={categorySlug} className={styles['meta__category-link']}>
+              {category}
+            </Link>
+          </span>
+        </span>
+      ) : null}
     </p>
   </div>
 )
