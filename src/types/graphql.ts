@@ -55,6 +55,7 @@ export interface Author {
 export interface SiteMetadata {
   url: string
   pathPrefix: string
+  name: string
   title: string
   subtitle: string
   author: Author
