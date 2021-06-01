@@ -5,6 +5,7 @@ on:
     types: [opened, synchronize, reopened]
     paths:
       - '.github/workflows/tests.yml'
+      - 'content/**'
       - 'gatsby/**'
       - 'jest/**'
       - 'src/**'
