@@ -4,7 +4,7 @@ title: MIME types are not stored in the filesystem
 socialImage: /media/posts/mime-types-are-not-stored-in-the-filesystem/thumb.png
 draft: false
 date: 2021-05-31T04:30:00.000Z
-description: What I learned about exponential backoff.
+description: My new learning about MIME types.
 series: Today I learned
 tags:
   - MIME
