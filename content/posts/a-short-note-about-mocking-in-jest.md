@@ -4,7 +4,7 @@ title: A short note about mocking in Jest
 socialImage: /media/posts/a-short-note-about-mocking-in-jest/thumb.png
 draft: false
 date: 2021-06-01T04:30:00.000Z
-description: 2 ways to mock a Node.js module with Jest
+description: 2 ways to mock a Node.js module with Jest.
 tags:
   - jest
 ---
