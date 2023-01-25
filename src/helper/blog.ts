@@ -1,5 +1,8 @@
-import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 
-export const isPostPublished = (post: CollectionEntry<'blog'>['data']): boolean => {
-  return !post.draft && post.publishedDate != null
-}
+export const getPublishedBlogEntries = async () => {
+  const entries = await getCollection('blog');
+  return entries.filter(
+    ({ data }) => !data.draft && data.publishedDate != null
+  );
+};

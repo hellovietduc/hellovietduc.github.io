@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 import PostCard from '../components/PostCard.vue';
-import { isPostPublished } from '../helper/blog';
+import { getPublishedBlogEntries } from '../helper/blog';
 
-const allPosts = await getCollection('blog');
-const publishedPosts = allPosts
-  .filter((post) => isPostPublished(post.data))
-  .map((post) => ({ ...post.data, url: `/posts/${post.slug}` }));
+const blogEntries = await getPublishedBlogEntries();
+const publishedPosts = blogEntries.map<
+  CollectionEntry<'blog'>['data'] & { url: string }
+>((entry) => ({ ...entry.data, url: `/posts/${entry.slug}` }));
 </script>
 
 <template>

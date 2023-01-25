@@ -13,7 +13,7 @@
     "rss": {
       "text": "Subscribe",
       "icon": "",
-      "url": "/rss"
+      "url": "/rss.xml"
     },
     "linkedin": {
       "text": "LinkedIn",

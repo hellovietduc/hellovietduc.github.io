@@ -1,13 +1,9 @@
 ---
-import { getCollection } from 'astro:content';
-import { isPostPublished } from '../../helper/blog';
+import { getPublishedBlogEntries } from '../../helper/blog';
 
 export async function getStaticPaths() {
-  const allEntries = await getCollection('blog');
-  const publishedEntries = allEntries.filter((entry) =>
-    isPostPublished(entry.data)
-  );
-  return publishedEntries.map((entry) => ({
+  const blogEntries = await getPublishedBlogEntries();
+  return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
   }));
