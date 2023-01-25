@@ -10,6 +10,10 @@ import tailwind from "@astrojs/tailwind";
 import prefetch from "@astrojs/prefetch";
 
 // https://astro.build/config
+import sitemap from "@astrojs/sitemap";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [vue(), tailwind(), prefetch()]
+  site: 'https://duckwho.codes',
+  integrations: [vue(), tailwind(), prefetch(), sitemap()]
 });
