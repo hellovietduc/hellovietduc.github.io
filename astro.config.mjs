@@ -13,7 +13,10 @@ import prefetch from "@astrojs/prefetch";
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
+import mdx from "@astrojs/mdx";
+
+// https://astro.build/config
 export default defineConfig({
   site: 'https://duckwho.codes',
-  integrations: [vue(), tailwind(), prefetch(), sitemap()]
+  integrations: [vue(), tailwind(), prefetch(), sitemap(), mdx()]
 });
