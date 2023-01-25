@@ -1,6 +1,8 @@
 ---
+import TagList from '../components/TagList.vue';
 import Header from '../layouts/Header.vue';
 import metadata from '../metadata.json';
+import Footer from './Footer.vue';
 
 const { frontmatter } = Astro.props;
 ---
@@ -20,5 +22,8 @@ const { frontmatter } = Astro.props;
       <h1>{frontmatter.title}</h1>
       <slot />
     </main>
+    <Footer>
+      <TagList tags={frontmatter.tags} slot="top" />
+    </Footer>
   </body>
 </html>
