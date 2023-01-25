@@ -18,7 +18,7 @@ const formattedDate = computed(() => {
 </script>
 
 <template>
-  <Link :url="url">
+  <Link :url="url" :prefetch="true">
     <article>
       <h1>{{ title }}</h1>
       <p>{{ description }}</p>

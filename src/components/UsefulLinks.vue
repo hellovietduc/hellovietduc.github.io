@@ -5,7 +5,12 @@ import Link from './Link.vue';
 
 <template>
   <div class="flex">
-    <Link v-for="link in metadata.links" :url="link.url" class="flex flex-col">
+    <Link
+      v-for="link in metadata.links"
+      :url="link.url"
+      :prefetch="true"
+      class="flex flex-col"
+    >
       <img :src="link.icon" :alt="link.text" />
       <p>{{ link.text }}</p>
     </Link>
