@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import UsefulLinks from './UsefulLinks.vue';
+import UsefulLinks from '../components/UsefulLinks.vue';
 </script>
 
 <template>
