@@ -1,12 +1,13 @@
 ---
 import Header from '../layouts/Header.vue';
 import Layout from '../layouts/Layout.astro';
+import PostList from '../layouts/PostList.vue';
 import metadata from '../metadata.json';
 ---
 
 <Layout title={metadata.pageTitle}>
 	<Header extended={true} />
 	<main>
-		Hello, world!
+		<PostList />
 	</main>
 </Layout>
