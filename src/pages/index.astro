@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import metadata from '../metadata.json';
 ---
 
-<Layout title="Hello, world!">
+<Layout title={metadata.pageTitle}>
 	<main>
 		Hello, world!
 	</main>
