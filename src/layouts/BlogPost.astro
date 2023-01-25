@@ -1,0 +1,24 @@
+---
+import Header from '../layouts/Header.vue';
+import metadata from '../metadata.json';
+
+const { frontmatter } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{frontmatter.title} | {metadata.pageTitle}</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>{frontmatter.title}</h1>
+      <slot />
+    </main>
+  </body>
+</html>
