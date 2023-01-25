@@ -1,29 +1,30 @@
 ---
+import SocialMetaTags from '../components/SocialMetaTags.astro';
 import TagList from '../components/TagList.vue';
 import Header from '../layouts/Header.vue';
 import metadata from '../metadata.json';
 import Footer from './Footer.vue';
+import Layout from './Layout.astro';
 
 const { frontmatter } = Astro.props;
+const pageTitle = `${frontmatter.title} | ${metadata.pageTitle}`;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{frontmatter.title} | {metadata.pageTitle}</title>
-  </head>
-  <body>
-    <Header />
-    <main>
-      <h1>{frontmatter.title}</h1>
-      <slot />
-    </main>
-    <Footer>
-      <TagList tags={frontmatter.tags} slot="top" />
-    </Footer>
-  </body>
-</html>
+<Layout title={pageTitle}>
+  <SocialMetaTags
+    contentType="article"
+    url={frontmatter.url}
+    title={pageTitle}
+    description={frontmatter.description}
+    imageUrl="/cover.png"
+    slot="head"
+  />
+  <Header />
+  <main>
+    <h1>{frontmatter.title}</h1>
+    <slot />
+  </main>
+  <Footer>
+    <TagList tags={frontmatter.tags} slot="top" />
+  </Footer>
+</Layout>
