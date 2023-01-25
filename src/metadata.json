@@ -3,5 +3,27 @@
   "authorBio": "Hi there 👋, my name is Duc Nguyen. I'm a software engineer. When I get bored or tired of my day-to-day job, I go put random stuff on my website with no expectation to catch anyone's attention. Oh, but you're here, so, I hope you like my content. Thanks. 😁",
   "blogName": "Duck Who Codes",
   "blogDescription": "Blog by Duc Nguyen - Software Engineer @ Padlet. Making the world better with code.",
-  "pageTitle": "Duck Who Codes - Blog by Duc Nguyen"
+  "pageTitle": "Duck Who Codes - Blog by Duc Nguyen",
+  "links": {
+    "aboutme": {
+      "text": "About me",
+      "icon": "",
+      "url": "/about"
+    },
+    "rss": {
+      "text": "Subscribe",
+      "icon": "",
+      "url": "/rss"
+    },
+    "linkedin": {
+      "text": "LinkedIn",
+      "icon": "",
+      "url": "https://www.linkedin.com/in/hellovietduc"
+    },
+    "github": {
+      "text": "GitHub",
+      "icon": "",
+      "url": "https://github.com/hellovietduc"
+    }
+  }
 }

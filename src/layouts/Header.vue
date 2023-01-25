@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import Link from '../components/Link.vue';
 import metadata from '../metadata.json';
+import UsefulLinks from './UsefulLinks.vue';
 
 withDefaults(
   defineProps<{
@@ -14,7 +16,9 @@ withDefaults(
 <template>
   <header>
     <div>
-      <img src="logo.png" :alt="`${metadata.blogName}'s logo`" />
+      <Link url="/" :aria-label="`${metadata.blogName}'s logo`">
+        <img src="logo.png" :alt="`${metadata.blogName}'s logo`" />
+      </Link>
     </div>
     <template v-if="extended">
       <h1>
@@ -23,6 +27,7 @@ withDefaults(
       <h2>
         {{ metadata.blogDescription }}
       </h2>
+      <UsefulLinks />
     </template>
   </header>
 </template>
