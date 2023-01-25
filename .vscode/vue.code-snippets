@@ -1,0 +1,7 @@
+{
+  "New component using Composition API syntax": {
+    "prefix": "vue3",
+    "body": ["<script setup lang=\"ts\">", "", "</script>", "", "<template>", "  <div>$1</div>", "</template>"],
+    "description": "New component using Composition API syntax"
+  }
+}
