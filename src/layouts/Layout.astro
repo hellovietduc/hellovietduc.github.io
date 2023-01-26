@@ -16,7 +16,7 @@ const { frontmatter, title } = Astro.props;
 		<title>{frontmatter?.title || title}</title>
 		<slot name="head" />
 	</head>
-	<body class="max-w-screen-md mx-auto">
+	<body class="max-w-screen-md mx-auto my-4">
 		<slot />
 	</body>
 </html>
