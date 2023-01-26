@@ -1,0 +1,8 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import metadata from '../../metadata.json';
+---
+
+<Layout title={metadata.pageTitle}>
+  <meta http-equiv="refresh" content={`0; url=${metadata.site}`} slot="head" />
+</Layout>
