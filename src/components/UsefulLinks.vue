@@ -9,10 +9,16 @@ import Link from './Link.vue';
       v-for="link in metadata.links"
       :url="link.url"
       :prefetch="true"
-      class="flex flex-col items-center"
+      class="flex flex-col items-center group"
     >
-      <img :src="link.icon" :alt="link.text" width="24" height="24" />
-      <p class="text-sm">{{ link.text }}</p>
+      <i
+        class="w-6 h-6 bg-eerie-black group-hover:bg-goldenrod transition-colors motion-reduce:transition-none"
+        :style="{
+          '-webkit-mask': `url(${link.icon}) no-repeat center`,
+          mask: `url(${link.icon}) no-repeat center`,
+        }"
+      ></i>
+      <p class="text-sm group-hover:text-goldenrod">{{ link.text }}</p>
     </Link>
   </div>
 </template>
