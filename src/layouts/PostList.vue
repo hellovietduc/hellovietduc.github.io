@@ -10,7 +10,7 @@ const publishedPosts = blogEntries.map<
 </script>
 
 <template>
-  <div>
+  <div class="flex flex-col gap-8">
     <PostCard
       v-for="post in publishedPosts"
       :url="post.url"
