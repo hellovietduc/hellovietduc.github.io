@@ -1,0 +1,135 @@
+---
+import SocialMetaTags from '@components/SocialMetaTags.vue';
+import TagList from '@components/TagList.vue';
+import { formatDate } from '@helpers/date';
+import Footer from '@layouts/Footer.vue';
+import Header from '@layouts/Header.vue';
+import Layout from '@layouts/Layout.astro';
+import metadata from '@metadata.json';
+
+const { frontmatter } = Astro.props;
+
+const pageTitle = `${frontmatter.title} | ${metadata.pageTitle}`;
+const formattedDate = formatDate(frontmatter.publishedDate);
+---
+
+<Layout title={pageTitle}>
+  <SocialMetaTags
+    contentType="article"
+    url={frontmatter.url}
+    title={pageTitle}
+    description={frontmatter.description}
+    imageUrl="/cover.png"
+    slot="head"
+  />
+  <Header />
+  <main>
+    <h1 class="mb-4 text-2xl text-center font-semibold">
+      {frontmatter.title}
+    </h1>
+    <p class="mb-8 text-sm text-center">
+      Published
+      <time datetime={frontmatter.publishedDate.toString()}>
+        {formattedDate}
+      </time>
+    </p>
+    <article id="post">
+      <slot />
+    </article>
+  </main>
+  <Footer>
+    <TagList tags={frontmatter.tags} />
+  </Footer>
+</Layout>
+
+<style is:global>
+  #post :not(pre) > code {
+    @apply rounded;
+    @apply px-1.5;
+    @apply py-0.5;
+    @apply bg-gray-200;
+  }
+
+  #post :not(:is(h1, h2, h3, h4, h5, h6)) > code {
+    @apply text-sm;
+  }
+
+  #post pre {
+    @apply rounded-lg;
+    @apply p-4;
+    @apply text-sm;
+  }
+
+  #post ol {
+    @apply list-decimal;
+    @apply my-4;
+    @apply pl-6;
+  }
+
+  #post ul {
+    @apply list-disc;
+    @apply my-4;
+    @apply pl-6;
+  }
+
+  #post li {
+    @apply my-2;
+    @apply text-lg;
+  }
+
+  #post a {
+    @apply underline;
+  }
+
+  #post a:hover {
+    @apply no-underline;
+    @apply text-goldenrod;
+    @apply transition-colors;
+    @apply motion-reduce:transition-none;
+  }
+
+  #post p {
+    @apply my-4;
+    @apply text-lg;
+  }
+
+  #post h6 {
+    @apply mt-4;
+    @apply mb-2;
+    @apply text-xl;
+  }
+
+  #post h5 {
+    @apply mt-5;
+    @apply mb-2.5;
+    @apply text-1.5xl;
+  }
+
+  #post h4 {
+    @apply mt-6;
+    @apply mb-3;
+    @apply text-2xl;
+    @apply font-medium;
+  }
+
+  #post h3 {
+    @apply mt-8;
+    @apply mb-4;
+    @apply text-2.5xl;
+    @apply font-medium;
+  }
+
+  #post h2 {
+    @apply mt-10;
+    @apply mb-5;
+    @apply text-3xl;
+    @apply font-semibold;
+  }
+
+  #post h1 {
+    @apply mt-12;
+    @apply mb-6;
+    @apply text-3.5xl;
+    @apply font-semibold;
+  }
+</style>

@@ -1,0 +1,19 @@
+---
+import PostList from '@components/PostList.vue';
+import { getPublishedBlogEntries } from '@helpers/blog';
+import Footer from '@layouts/Footer.vue';
+import Header from '@layouts/Header.vue';
+import Layout from '@layouts/Layout.astro';
+import metadata from '@metadata.json';
+
+const blogEntries = await getPublishedBlogEntries();
+const posts = blogEntries.map((entry) => ({ ...entry.data, url: `/posts/${entry.slug}` }));
+---
+
+<Layout title={metadata.pageTitle}>
+	<Header extended={true} />
+	<main>
+		<PostList posts={posts} />
+	</main>
+	<Footer />
+</Layout>
