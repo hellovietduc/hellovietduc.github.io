@@ -81,6 +81,13 @@ const formattedDate = formatDate(frontmatter.publishedDate);
     @apply underline;
   }
 
+  #post a:hover {
+    @apply no-underline;
+    @apply text-goldenrod;
+    @apply transition-colors;
+    @apply motion-reduce:transition-none;
+  }
+
   #post p {
     @apply my-4;
     @apply text-lg;
