@@ -15,6 +15,7 @@ const makeUrl = (tag: string) => `/tags/${slugify(tag, { decamelize: false })}`;
     :url="makeUrl(tag)"
     :prefetch="true"
     class="uppercase"
-    >#{{ tag }}</Link
   >
+    #{{ tag }}
+  </Link>
 </template>
