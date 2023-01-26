@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import metadata from '../metadata.json';
-import Link from './Link.vue';
+import Link from '@components/Link.vue';
+import metadata from '@metadata.json';
 </script>
 
 <template>

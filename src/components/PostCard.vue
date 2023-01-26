@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { formatDate } from '../helper/date';
-import Link from './Link.vue';
-import TagList from './TagList.vue';
+import Link from '@components/Link.vue';
+import TagList from '@components/TagList.vue';
+import { formatDate } from '@helpers/date';
 
 const props = defineProps<{
   title: string;

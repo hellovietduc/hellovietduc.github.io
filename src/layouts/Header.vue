@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Link from '../components/Link.vue';
-import metadata from '../metadata.json';
+import Link from '@components/Link.vue';
+import metadata from '@metadata.json';
 
 withDefaults(
   defineProps<{

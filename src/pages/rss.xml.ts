@@ -1,7 +1,7 @@
 import rss from '@astrojs/rss';
+import { getPublishedBlogEntries } from '@helpers/blog';
+import metadata from '@metadata.json';
 import type { APIRoute } from 'astro';
-import { getPublishedBlogEntries } from '../helper/blog';
-import metadata from '../metadata.json';
 
 export const get: APIRoute = async (context) => {
   const blogEntries = await getPublishedBlogEntries();

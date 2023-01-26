@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import Link from '@components/Link.vue';
 import slugify from '@sindresorhus/slugify';
-import Link from './Link.vue';
 
 defineProps<{
   tags: string[];

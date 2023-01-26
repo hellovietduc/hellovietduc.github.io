@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import PostCard from '@components/PostCard.vue';
 import type { CollectionEntry } from 'astro:content';
-import PostCard from './PostCard.vue';
 
 type Post = CollectionEntry<'blog'>['data'] & { url: string };
 

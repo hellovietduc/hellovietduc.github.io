@@ -1,5 +1,5 @@
 ---
-import { getPublishedBlogEntries } from '../../helper/blog';
+import { getPublishedBlogEntries } from '@helpers/blog';
 
 export async function getStaticPaths() {
   const blogEntries = await getPublishedBlogEntries();
