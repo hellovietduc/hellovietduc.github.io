@@ -16,7 +16,7 @@ const { frontmatter, title } = Astro.props;
 		<title>{frontmatter?.title || title}</title>
 		<slot name="head" />
 	</head>
-	<body class="max-w-screen-md mx-auto my-4">
+	<body class="max-w-screen-md mx-auto p-4">
 		<slot />
 	</body>
 </html>
@@ -26,7 +26,7 @@ const { frontmatter, title } = Astro.props;
 		font-family: system-ui, sans-serif;
 	}
 
-	code {
+	code, pre {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}

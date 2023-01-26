@@ -33,9 +33,92 @@ const formattedDate = (() => {
         {formattedDate}
       </time>
     </p>
-    <slot />
+    <article id="post">
+      <slot />
+    </article>
   </main>
   <Footer>
     <TagList tags={frontmatter.tags} />
   </Footer>
 </Layout>
+
+<style is:global>
+  #post :not(pre) > code {
+    @apply rounded;
+    @apply px-1.5;
+    @apply py-0.5;
+    @apply bg-gray-200;
+  }
+
+  #post :not(:is(h1, h2, h3, h4, h5, h6)) > code {
+    @apply text-sm;
+  }
+
+  #post pre {
+    @apply rounded-lg;
+    @apply p-4;
+    @apply text-sm;
+  }
+
+  #post ol {
+    @apply list-decimal;
+    @apply my-4;
+    @apply pl-6;
+  }
+
+  #post ul {
+    @apply list-disc;
+    @apply my-4;
+    @apply pl-6;
+  }
+
+  #post li {
+    @apply my-2;
+    @apply text-lg;
+  }
+
+  #post a {
+    @apply underline;
+  }
+
+  #post p {
+    @apply my-4;
+    @apply text-lg;
+  }
+
+  #post h6 {
+    @apply mt-4;
+    @apply mb-2;
+    @apply text-xl;
+  }
+
+  #post h5 {
+    @apply mt-5;
+    @apply mb-2.5;
+    @apply text-1.5xl;
+  }
+
+  #post h4 {
+    @apply mt-6;
+    @apply mb-3;
+    @apply text-2xl;
+  }
+
+  #post h3 {
+    @apply mt-8;
+    @apply mb-4;
+    @apply text-2.5xl;
+  }
+
+  #post h2 {
+    @apply mt-10;
+    @apply mb-5;
+    @apply text-3xl;
+  }
+
+  #post h1 {
+    @apply mt-12;
+    @apply mb-6;
+    @apply text-3.5xl;
+  }
+</style>
