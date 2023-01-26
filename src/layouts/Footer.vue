@@ -4,7 +4,7 @@ import UsefulLinks from '../components/UsefulLinks.vue';
 
 <template>
   <footer>
-    <slot name="top" />
+    <slot />
     <UsefulLinks />
   </footer>
 </template>

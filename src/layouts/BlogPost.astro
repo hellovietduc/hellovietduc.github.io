@@ -25,6 +25,6 @@ const pageTitle = `${frontmatter.title} | ${metadata.pageTitle}`;
     <slot />
   </main>
   <Footer class="flex flex-col items-center">
-    <TagList tags={frontmatter.tags} slot="top" />
+    <TagList tags={frontmatter.tags} />
   </Footer>
 </Layout>
