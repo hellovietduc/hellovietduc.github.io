@@ -60,6 +60,11 @@ const formattedDate = formatDate(frontmatter.publishedDate);
     @apply text-sm;
   }
 
+  #post pre > code ::selection {
+    @apply bg-cosmic-cobalt;
+    @apply text-alabaster;
+  }
+
   #post ol {
     @apply list-decimal;
     @apply my-4;
