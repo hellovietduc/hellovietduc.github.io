@@ -20,7 +20,7 @@ withDefaults(
       </Link>
     </div>
     <template v-if="extended">
-      <h1 class="text-3xl">
+      <h1 class="text-3xl font-semibold">
         {{ metadata.blogName }}
       </h1>
       <h2>

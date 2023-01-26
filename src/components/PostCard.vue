@@ -20,7 +20,7 @@ const formattedDate = computed(() => {
 <template>
   <article class="flex flex-col gap-4">
     <Link :url="url" :prefetch="true">
-      <h1 class="text-xl">{{ title }}</h1>
+      <h1 class="text-xl font-semibold">{{ title }}</h1>
     </Link>
     <p>{{ description }}</p>
     <div class="flex gap-3 text-sm">

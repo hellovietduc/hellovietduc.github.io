@@ -26,7 +26,9 @@ const formattedDate = (() => {
   />
   <Header />
   <main>
-    <h1 class="mb-4 text-2xl text-center">{frontmatter.title}</h1>
+    <h1 class="mb-4 text-2xl text-center font-semibold">
+      {frontmatter.title}
+    </h1>
     <p class="mb-8 text-sm text-center">
       Published
       <time datetime={frontmatter.publishedDate.toString()}>
@@ -102,23 +104,27 @@ const formattedDate = (() => {
     @apply mt-6;
     @apply mb-3;
     @apply text-2xl;
+    @apply font-medium;
   }
 
   #post h3 {
     @apply mt-8;
     @apply mb-4;
     @apply text-2.5xl;
+    @apply font-medium;
   }
 
   #post h2 {
     @apply mt-10;
     @apply mb-5;
     @apply text-3xl;
+    @apply font-semibold;
   }
 
   #post h1 {
     @apply mt-12;
     @apply mb-6;
     @apply text-3.5xl;
+    @apply font-semibold;
   }
 </style>
