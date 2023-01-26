@@ -7,22 +7,22 @@
   "links": {
     "aboutme": {
       "text": "About me",
-      "icon": "",
+      "icon": "/file-person-fill.svg",
       "url": "/about"
     },
     "rss": {
       "text": "Subscribe",
-      "icon": "",
+      "icon": "/rss-fill.svg",
       "url": "/rss.xml"
     },
     "linkedin": {
       "text": "LinkedIn",
-      "icon": "",
+      "icon": "/linkedin.svg",
       "url": "https://www.linkedin.com/in/hellovietduc"
     },
     "github": {
       "text": "GitHub",
-      "icon": "",
+      "icon": "/github.svg",
       "url": "https://github.com/hellovietduc"
     }
   }

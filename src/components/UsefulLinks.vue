@@ -9,9 +9,9 @@ import Link from './Link.vue';
       v-for="link in metadata.links"
       :url="link.url"
       :prefetch="true"
-      class="flex flex-col"
+      class="flex flex-col items-center"
     >
-      <img :src="link.icon" :alt="link.text" />
+      <img :src="link.icon" :alt="link.text" width="24" height="24" />
       <p>{{ link.text }}</p>
     </Link>
   </div>
