@@ -25,9 +25,7 @@ const formattedDate = computed(() => {
     <p>{{ description }}</p>
     <div class="flex gap-3 text-sm">
       <time :datetime="publishedDate.toString()">{{ formattedDate }}</time>
-      <div>
-        <TagList :tags="tags" />
-      </div>
+      <TagList :tags="tags" />
     </div>
   </article>
 </template>
