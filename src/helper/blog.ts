@@ -10,21 +10,17 @@ export const getPublishedBlogEntries = async () => {
     );
 };
 
-export const slugifyTag = (rawTag: string) => {
-  return slugify(rawTag, { decamelize: false });
-};
-
 export const getPublishedBlogEntriesByTag = async (tag: string | undefined) => {
   if (!tag) return [];
   const blogEntries = await getPublishedBlogEntries();
-  return blogEntries.filter(({ data }) => data.tags.some(rawTag => slugifyTag(rawTag) === tag));
+  return blogEntries.filter(({ data }) => data.tags.some(rawTag => slugify(rawTag, { decamelize: false }) === tag));
 };
 
 export const getSlugifiedTags = async () => {
   const blogEntries = await getPublishedBlogEntries();
   const tags = new Set<string>();
   blogEntries.forEach(({ data }) =>
-    data.tags.forEach((rawTag) => tags.add(slugifyTag(rawTag)))
+    data.tags.forEach((rawTag) => tags.add(slugify(rawTag, { decamelize: false })))
   );
   return [...tags];
 };
