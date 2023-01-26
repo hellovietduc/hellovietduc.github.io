@@ -1,8 +1,14 @@
 ---
 import UsefulLinks from '../components/UsefulLinks.vue';
+
+export interface Props {
+  class: string
+}
+
+const { class: classes} = Astro.props
 ---
 
-<footer>
+<footer class={classes}>
   <slot name="top" />
   <UsefulLinks />
 </footer>

@@ -21,10 +21,10 @@ const pageTitle = `${frontmatter.title} | ${metadata.pageTitle}`;
   />
   <Header />
   <main>
-    <h1>{frontmatter.title}</h1>
+    <h1 class="text-center">{frontmatter.title}</h1>
     <slot />
   </main>
-  <Footer>
+  <Footer class="flex flex-col items-center">
     <TagList tags={frontmatter.tags} slot="top" />
   </Footer>
 </Layout>
