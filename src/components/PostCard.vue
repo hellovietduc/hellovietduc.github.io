@@ -18,14 +18,14 @@ const formattedDate = computed(() => {
 </script>
 
 <template>
-  <Link :url="url" :prefetch="true">
-    <article>
+  <article>
+    <Link :url="url" :prefetch="true">
       <h1>{{ title }}</h1>
-      <p>{{ description }}</p>
-      <span>
-        <time :datetime="publishedDate.toString()">{{ formattedDate }}</time>
-        <TagList :tags="tags" />
-      </span>
-    </article>
-  </Link>
+    </Link>
+    <p>{{ description }}</p>
+    <span>
+      <time :datetime="publishedDate.toString()">{{ formattedDate }}</time>
+      <TagList :tags="tags" />
+    </span>
+  </article>
 </template>
