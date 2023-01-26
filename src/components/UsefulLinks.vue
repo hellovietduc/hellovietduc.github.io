@@ -4,7 +4,7 @@ import Link from './Link.vue';
 </script>
 
 <template>
-  <div class="flex gap-6">
+  <div class="flex flex-wrap gap-6">
     <Link
       v-for="link in metadata.links"
       :url="link.url"
