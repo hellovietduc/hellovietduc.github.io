@@ -16,7 +16,7 @@ const { frontmatter, title } = Astro.props;
 		<title>{frontmatter?.title || title}</title>
 		<slot name="head" />
 	</head>
-	<body>
+	<body class="max-w-screen-md mx-auto">
 		<slot />
 	</body>
 </html>
@@ -24,7 +24,6 @@ const { frontmatter, title } = Astro.props;
 <style is:global>
 	html {
 		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
 	}
 
 	code {
