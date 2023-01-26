@@ -1,6 +1,7 @@
 ---
 import SocialMetaTags from '../components/SocialMetaTags.vue';
 import TagList from '../components/TagList.vue';
+import { formatDate } from '../helper/date';
 import metadata from '../metadata.json';
 import Footer from './Footer.vue';
 import Header from './Header.vue';
@@ -9,10 +10,7 @@ import Layout from './Layout.astro';
 const { frontmatter } = Astro.props;
 
 const pageTitle = `${frontmatter.title} | ${metadata.pageTitle}`;
-const formattedDate = (() => {
-  const date = new Date(frontmatter.publishedDate);
-  return date.toLocaleDateString();
-})();
+const formattedDate = formatDate(frontmatter.publishedDate);
 ---
 
 <Layout title={pageTitle}>

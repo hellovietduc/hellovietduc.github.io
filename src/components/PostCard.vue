@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { formatDate } from '../helper/date';
 import Link from './Link.vue';
 import TagList from './TagList.vue';
 
@@ -11,10 +11,7 @@ const props = defineProps<{
   url: string;
 }>();
 
-const formattedDate = computed(() => {
-  const date = new Date(props.publishedDate);
-  return date.toLocaleDateString();
-});
+const formattedDate = formatDate(props.publishedDate);
 </script>
 
 <template>
