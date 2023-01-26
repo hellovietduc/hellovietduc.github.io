@@ -13,14 +13,14 @@ withDefaults(
 </script>
 
 <template>
-  <header class="flex flex-col items-center">
+  <header class="flex flex-col items-center gap-4 mb-12">
     <div>
       <Link url="/" :aria-label="`${metadata.blogName}'s logo`">
         <img src="/logo.png" :alt="`${metadata.blogName}'s logo`" width="80" height="80" class="rounded-full" />
       </Link>
     </div>
     <template v-if="extended">
-      <h1>
+      <h1 class="text-3xl">
         {{ metadata.blogName }}
       </h1>
       <h2>
