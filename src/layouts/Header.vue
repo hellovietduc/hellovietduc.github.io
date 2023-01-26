@@ -14,10 +14,10 @@ withDefaults(
 </script>
 
 <template>
-  <header>
+  <header class="flex flex-col items-center">
     <div>
       <Link url="/" :aria-label="`${metadata.blogName}'s logo`">
-        <img src="/logo.png" :alt="`${metadata.blogName}'s logo`" />
+        <img src="/logo.png" :alt="`${metadata.blogName}'s logo`" width="80" height="80" class="rounded-full" />
       </Link>
     </div>
     <template v-if="extended">
