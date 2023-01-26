@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import slugify from '@sindresorhus/slugify';
+import { slugifyTag } from '../helper/blog';
 import Link from './Link.vue';
 
 defineProps<{
   tags: string[];
 }>();
 
-const makeUrl = (tag: string) => `/tags/${slugify(tag, { decamelize: false })}`;
+const makeUrl = (tag: string) => `/tags/${slugifyTag(tag)}`;
 </script>
 
 <template>
