@@ -15,8 +15,8 @@ const formattedDate = formatDate(props.publishedDate);
 </script>
 
 <template>
-  <article class="flex flex-col gap-4">
-    <Link :url="url" :prefetch="true">
+  <article class="flex flex-col items-start gap-4">
+    <Link :url="url" :prefetch="true" class="hover:text-goldenrod transition-colors motion-reduce:transition-none">
       <h1 class="text-xl font-semibold">{{ title }}</h1>
     </Link>
     <p>{{ description }}</p>

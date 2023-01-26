@@ -15,7 +15,7 @@ const makeUrl = (tag: string) => `/tags/${slugify(tag, { decamelize: false })}`;
       v-for="tag in tags"
       :url="makeUrl(tag)"
       :prefetch="true"
-      class="text-sm font-medium uppercase"
+      class="text-sm font-medium uppercase text-goldenrod hover:text-eerie-black transition-colors motion-reduce:transition-none"
     >
       #{{ tag }}
     </Link>
