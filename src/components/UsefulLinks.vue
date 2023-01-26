@@ -4,7 +4,7 @@ import Link from './Link.vue';
 </script>
 
 <template>
-  <div class="flex">
+  <div class="flex gap-6">
     <Link
       v-for="link in metadata.links"
       :url="link.url"
@@ -12,7 +12,7 @@ import Link from './Link.vue';
       class="flex flex-col items-center"
     >
       <img :src="link.icon" :alt="link.text" width="24" height="24" />
-      <p>{{ link.text }}</p>
+      <p class="text-sm">{{ link.text }}</p>
     </Link>
   </div>
 </template>
