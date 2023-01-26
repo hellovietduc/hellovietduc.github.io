@@ -7,7 +7,12 @@ import Header from './Header.vue';
 import Layout from './Layout.astro';
 
 const { frontmatter } = Astro.props;
+
 const pageTitle = `${frontmatter.title} | ${metadata.pageTitle}`;
+const formattedDate = (() => {
+  const date = new Date(frontmatter.publishedDate);
+  return date.toLocaleDateString();
+})();
 ---
 
 <Layout title={pageTitle}>
@@ -21,7 +26,13 @@ const pageTitle = `${frontmatter.title} | ${metadata.pageTitle}`;
   />
   <Header />
   <main>
-    <h1 class="mb-12 text-2xl text-center">{frontmatter.title}</h1>
+    <h1 class="mb-4 text-2xl text-center">{frontmatter.title}</h1>
+    <p class="mb-8 text-sm text-center">
+      Published
+      <time datetime={frontmatter.publishedDate.toString()}>
+        {formattedDate}
+      </time>
+    </p>
     <slot />
   </main>
   <Footer>

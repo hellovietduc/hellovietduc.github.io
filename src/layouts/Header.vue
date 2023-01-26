@@ -13,7 +13,7 @@ withDefaults(
 </script>
 
 <template>
-  <header class="flex flex-col items-center gap-4 mb-12">
+  <header :class="['flex flex-col items-center gap-4', extended ? 'mb-12' : 'mb-8']">
     <div>
       <Link url="/" :aria-label="`${metadata.blogName}'s logo`">
         <img src="/logo.png" :alt="`${metadata.blogName}'s logo`" width="80" height="80" class="rounded-full" />
