@@ -43,6 +43,7 @@ const formattedDate = formatDate(frontmatter.publishedDate);
 </Layout>
 
 <style is:global>
+  /* Inline code */
   #post :not(pre) > code {
     @apply rounded;
     @apply px-1.5;
@@ -54,11 +55,14 @@ const formattedDate = formatDate(frontmatter.publishedDate);
     @apply text-sm;
   }
 
+  /* Code block */
   #post pre {
     @apply rounded-lg;
     @apply my-4;
     @apply p-4;
     @apply text-sm;
+    @apply text-left;
+    tab-size: 2;
   }
 
   #post pre > code ::selection {
