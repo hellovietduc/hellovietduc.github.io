@@ -1,0 +1,6 @@
+.astro/
+dist/
+public/
+.eslintrc.cjs
+**/*.d.ts
+*.config*js

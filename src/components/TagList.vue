@@ -13,6 +13,7 @@ const makeUrl = (tag: string) => `/tags/${slugify(tag, { decamelize: false })}`
   <div class="flex flex-wrap gap-1.5">
     <Link
       v-for="tag in tags"
+      :key="tag"
       :url="makeUrl(tag)"
       :prefetch="true"
       :class="[

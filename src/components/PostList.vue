@@ -13,6 +13,7 @@ defineProps<{
   <div class="flex flex-col gap-8">
     <PostCard
       v-for="post in posts"
+      :key="post.url"
       :url="post.url"
       :title="post.title"
       :description="post.description"
