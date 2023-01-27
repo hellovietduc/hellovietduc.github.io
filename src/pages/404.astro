@@ -1,0 +1,37 @@
+---
+import Footer from '@layouts/Footer.vue';
+import Header from '@layouts/Header.vue';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout title="Not found | Duck Who Codes - Blog by Duc Nguyen">
+  <Header extended={true} />
+  <main>
+    <p class="px-2 py-4 bg-black text-infinite-color-change select-none cursor-help text-8xl font-mono font-extrabold text-center">404 Not Found</p>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .text-infinite-color-change {
+    animation: infinite-color-change 0.5s infinite;
+  }
+
+  @keyframes infinite-color-change {
+    0% {
+      color: #ff0000;
+    }
+    25% {
+      color: #ffff00;
+    }
+    50% {
+      color: #00ff00;
+    }
+    75% {
+      color: #00ffff;
+    }
+    100% {
+      color: #0000ff;
+    }
+  }
+</style>
