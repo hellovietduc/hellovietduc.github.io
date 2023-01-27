@@ -9,6 +9,7 @@ module.exports = {
 				goldenrod: '#E6AF2E',
 				alabaster: '#E0E2DB',
 				'cosmic-cobalt': '#3D348B',
+        'lavender-blue': '#C8C4E9',
 				'khaki-web': '#BEB7A4',
 			},
       fontSize: {

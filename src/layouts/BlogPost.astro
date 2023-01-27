@@ -66,6 +66,19 @@ const formattedDate = formatDate(frontmatter.publishedDate);
     @apply text-alabaster;
   }
 
+  #post blockquote {
+    @apply border-l-4;
+    @apply border-solid;
+    @apply border-cosmic-cobalt;
+    @apply bg-lavender-blue;
+    @apply px-4;
+    @apply py-2;
+  }
+
+  #post blockquote > p {
+    @apply my-0;
+  }
+
   #post ol {
     @apply list-decimal;
     @apply my-4;
