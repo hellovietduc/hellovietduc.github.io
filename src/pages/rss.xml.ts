@@ -16,6 +16,6 @@ export const get: APIRoute = async (context) => {
     description: metadata.blogDescription,
     site: context.site?.toString() ?? '',
     items: rssItems,
-    customData: `<language>en-us</language>`,
+    customData: '<language>en-us</language>',
   });
 };
