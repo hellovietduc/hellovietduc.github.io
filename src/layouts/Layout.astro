@@ -35,6 +35,7 @@ const socialMetaTags: SocialMetaTagsProps = Astro.props.socialMetaTags ?? {
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <meta name="description" content={socialMetaTags.description} />
     <meta property="og:type" content={socialMetaTags.contentType} />
     <meta property="og:url" content={socialMetaTags.url} />
     <meta property="og:title" content={socialMetaTags.title} />
