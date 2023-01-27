@@ -8,8 +8,6 @@ tags:
   - Node.js
 ---
 
-import thanosImpossibleMemeImg from '@assets/img/thanos-impossible-meme.png';
-
 ## The what
 
 It's very likely that when you are looking for a Node.js Stream code, you find something similar to this:
@@ -50,7 +48,7 @@ events.js:292
 
 You:
 
-<img src={thanosImpossibleMemeImg} alt="Thanos impossible meme"/>
+![Thanos impossible meme](/img/thanos-impossible-meme.png)
 
 ## The why
 

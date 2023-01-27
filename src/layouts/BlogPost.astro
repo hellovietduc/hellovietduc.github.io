@@ -1,5 +1,4 @@
 ---
-import SocialMetaTags from '@components/SocialMetaTags.vue';
 import TagList from '@components/TagList.vue';
 import { formatDate } from '@helpers/date';
 import Footer from '@layouts/Footer.vue';
@@ -10,18 +9,17 @@ import metadata from '@metadata.json';
 const { frontmatter } = Astro.props;
 
 const pageTitle = `${frontmatter.title} | ${metadata.pageTitle}`;
+const socialMetaTags = {
+  contentType: 'article',
+  url: frontmatter.url,
+  title: pageTitle,
+  description: frontmatter.description,
+  imageUrl: '/assets/cover.png',
+}
 const formattedDate = formatDate(frontmatter.publishedDate);
 ---
 
-<Layout title={pageTitle}>
-  <SocialMetaTags
-    contentType="article"
-    url={frontmatter.url}
-    title={pageTitle}
-    description={frontmatter.description}
-    imageUrl="/cover.png"
-    slot="head"
-  />
+<Layout title={pageTitle} socialMetaTags={socialMetaTags}>
   <Header />
   <main>
     <h1 class="mb-4 text-2xl text-center font-semibold">
@@ -43,6 +41,11 @@ const formattedDate = formatDate(frontmatter.publishedDate);
 </Layout>
 
 <style is:global>
+  #post img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   /* Inline code */
   #post :not(pre) > code {
     @apply rounded;

@@ -1,40 +1,63 @@
 ---
-export interface Props {
-	title: string;
+import metadata from '@metadata.json';
+
+interface SocialMetaTagsProps {
+  contentType: string;
+  url: string;
+  title: string;
+  description: string;
+  imageUrl: string;
 }
 
-const { frontmatter, title } = Astro.props;
+export interface Props {
+  title: string;
+  socialMetaTags?: SocialMetaTagsProps;
+}
+
+const pageTitle = Astro.props.frontmatter?.title || Astro.props.title;
+const socialMetaTags: SocialMetaTagsProps = Astro.props.socialMetaTags ?? {
+  contentType: 'website',
+  url: Astro.url.toString(),
+  title: metadata.pageTitle,
+  description: metadata.blogDescription,
+  imageUrl: '/assets/cover.png',
+};
 ---
 
 <!DOCTYPE html>
 <html lang="en" class="text-sm md:text-base">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
-		<meta name="generator" content={Astro.generator} />
-		<title>{frontmatter?.title || title}</title>
-		<slot name="head" />
-	</head>
-	<body class="max-w-screen-md mx-auto p-4 bg-gray-50 text-eerie-black">
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={socialMetaTags.description} />
+    <meta property="og:type" content={socialMetaTags.contentType} />
+    <meta property="og:url" content={socialMetaTags.url} />
+    <meta property="og:title" content={socialMetaTags.title} />
+    <meta property="og:description" content={socialMetaTags.description} />
+    <meta property="og:image" content={socialMetaTags.imageUrl} />
+  </head>
+  <body class="max-w-screen-md mx-auto p-4 bg-gray-50 text-eerie-black">
+    <slot />
+    <style is:global>
+      html {
+        font-family: system-ui, sans-serif;
+      }
+
+      code,
+      pre {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+      }
+
+      ::selection {
+        @apply bg-khaki-web;
+      }
+    </style>
+  </body>
 </html>
-
-<style is:global>
-	html {
-		font-family: system-ui, sans-serif;
-	}
-
-	code, pre {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-
-	::selection {
-		@apply bg-khaki-web;
-	}
-</style>

@@ -4,7 +4,6 @@
     "jsx": "preserve",
     "baseUrl": "./src",
     "paths": {
-      "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
       "@helpers/*": ["helpers/*"],
       "@layouts/*": ["layouts/*"],
