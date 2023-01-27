@@ -1,27 +1,27 @@
 ---
-import metadata from '@metadata.json';
+import metadata from '@metadata.json'
 
 interface SocialMetaTagsProps {
-  contentType: string;
-  url: string;
-  title: string;
-  description: string;
-  imageUrl: string;
+  contentType: string
+  url: string
+  title: string
+  description: string
+  imageUrl: string
 }
 
 export interface Props {
-  title: string;
-  socialMetaTags?: SocialMetaTagsProps;
+  title: string
+  socialMetaTags?: SocialMetaTagsProps
 }
 
-const pageTitle = Astro.props.frontmatter?.title || Astro.props.title;
+const pageTitle = Astro.props.frontmatter?.title || Astro.props.title
 const socialMetaTags: SocialMetaTagsProps = Astro.props.socialMetaTags ?? {
   contentType: 'website',
   url: Astro.url.toString(),
   title: metadata.pageTitle,
   description: metadata.blogDescription,
   imageUrl: '/assets/cover.20230128.png',
-};
+}
 ---
 
 <!DOCTYPE html>

@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import PostCard from '@components/PostCard.vue';
-import type { CollectionEntry } from 'astro:content';
+import PostCard from '@components/PostCard.vue'
+import type { CollectionEntry } from 'astro:content'
 
-type Post = CollectionEntry<'blog'>['data'] & { url: string };
+type Post = CollectionEntry<'blog'>['data'] & { url: string }
 
 defineProps<{
-  posts: Post[];
-}>();
+  posts: Post[]
+}>()
 </script>
 
 <template>

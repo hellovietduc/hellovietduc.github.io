@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Link from '@components/Link.vue';
-import metadata from '@metadata.json';
+import Link from '@components/Link.vue'
+import metadata from '@metadata.json'
 </script>
 
 <template>
@@ -12,7 +12,11 @@ import metadata from '@metadata.json';
       class="flex flex-col items-center group"
     >
       <i
-        class="w-6 h-6 bg-eerie-black group-hover:bg-goldenrod transition-colors motion-reduce:transition-none"
+        :class="[
+          'w-6 h-6',
+          'bg-eerie-black group-hover:bg-goldenrod',
+          'transition-colors motion-reduce:transition-none',
+        ]"
         :style="{
           '-webkit-mask': `url(${link.icon}) no-repeat center`,
           mask: `url(${link.icon}) no-repeat center`,

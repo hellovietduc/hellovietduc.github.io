@@ -1,26 +1,26 @@
 ---
-import PostList from '@components/PostList.vue';
-import { getPublishedBlogEntriesByTag,getTags } from '@helpers/blog';
-import Footer from '@layouts/Footer.vue';
-import Header from '@layouts/Header.vue';
-import Layout from '@layouts/Layout.astro';
-import metadata from '@metadata.json';
+import PostList from '@components/PostList.vue'
+import { getPublishedBlogEntriesByTag, getTags } from '@helpers/blog'
+import Footer from '@layouts/Footer.vue'
+import Header from '@layouts/Header.vue'
+import Layout from '@layouts/Layout.astro'
+import metadata from '@metadata.json'
 
 export async function getStaticPaths() {
-  const tags = await getTags({ slugify: true });
+  const tags = await getTags({ slugify: true })
   return tags.map((tag) => ({
     params: { tag },
-  }));
+  }))
 }
 
-const { tag } = Astro.params;
+const { tag } = Astro.params
 
-const pageTitle = `Posts tagged with ${tag} | ${metadata.pageTitle}`;
-const blogEntries = await getPublishedBlogEntriesByTag(tag);
+const pageTitle = `Posts tagged with ${tag} | ${metadata.pageTitle}`
+const blogEntries = await getPublishedBlogEntriesByTag(tag)
 const posts = blogEntries.map((entry) => ({
   ...entry.data,
   url: `/posts/${entry.slug}`,
-}));
+}))
 ---
 
 <Layout title={pageTitle}>

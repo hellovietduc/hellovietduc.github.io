@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed } from 'vue'
 
 const props = withDefaults(
   defineProps<{
-    url: string;
-    prefetch?: boolean;
+    url: string
+    prefetch?: boolean
   }>(),
   {
     prefetch: false,
-  }
-);
+  },
+)
 
-const isInternal = computed(() => props.url.startsWith('/'));
+const isInternal = computed(() => props.url.startsWith('/'))
 const rel = computed(() => {
-  const rels = [];
+  const rels = []
   if (isInternal.value && props.prefetch) {
-    rels.push('prefetch');
+    rels.push('prefetch')
   }
   if (!isInternal.value) {
-    rels.push('noopener', 'nofollow');
+    rels.push('noopener', 'nofollow')
   }
-  return rels.join(' ');
-});
+  return rels.join(' ')
+})
 </script>
 
 <template>

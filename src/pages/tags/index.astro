@@ -1,13 +1,13 @@
 ---
-import TagList from '@components/TagList.vue';
-import { getTags } from '@helpers/blog';
-import Footer from '@layouts/Footer.vue';
-import Header from '@layouts/Header.vue';
-import Layout from '@layouts/Layout.astro';
-import metadata from '@metadata.json';
+import TagList from '@components/TagList.vue'
+import { getTags } from '@helpers/blog'
+import Footer from '@layouts/Footer.vue'
+import Header from '@layouts/Header.vue'
+import Layout from '@layouts/Layout.astro'
+import metadata from '@metadata.json'
 
-const pageTitle = `All tags | ${metadata.pageTitle}`;
-const tags = await getTags({ sort: 'asc' });
+const pageTitle = `All tags | ${metadata.pageTitle}`
+const tags = await getTags({ sort: 'asc' })
 ---
 
 <Layout title={pageTitle}>
