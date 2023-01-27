@@ -18,5 +18,12 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://duckwho.codes',
+  markdown: {
+    shikiConfig: {
+      // Choose from Shiki's built-in themes (or add your own)
+      // https://github.com/shikijs/shiki/blob/main/docs/themes.md
+      theme: 'github-dark-dimmed',
+    },
+  },
   integrations: [vue(), tailwind(), prefetch(), sitemap(), mdx()]
 });

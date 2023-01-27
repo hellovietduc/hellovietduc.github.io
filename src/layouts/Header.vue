@@ -14,7 +14,7 @@ withDefaults(
 
 <template>
   <header
-    :class="['flex flex-col items-center gap-4', extended ? 'mb-12' : 'mb-8']"
+    :class="['flex flex-col items-center gap-4', extended ? 'mb-12' : 'mb-8', 'text-center']"
   >
     <div>
       <Link url="/" :aria-label="`${metadata.blogName}'s logo`">
@@ -23,6 +23,7 @@ withDefaults(
           :alt="`${metadata.blogName}'s logo`"
           width="80"
           height="80"
+          loading="lazy"
           class="rounded-full hover:ring-2 ring-goldenrod hover:ring-offset-2 ring-offset-gray-50 transition-shadow motion-reduce:transition-none"
         />
       </Link>

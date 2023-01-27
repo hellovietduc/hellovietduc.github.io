@@ -33,7 +33,7 @@ const formattedDate = formatDate(frontmatter.publishedDate);
         {formattedDate}
       </time>
     </p>
-    <article id="post">
+    <article id="post" class="text-justify">
       <slot />
     </article>
   </main>
@@ -43,6 +43,7 @@ const formattedDate = formatDate(frontmatter.publishedDate);
 </Layout>
 
 <style is:global>
+  /* Inline code */
   #post :not(pre) > code {
     @apply rounded;
     @apply px-1.5;
@@ -54,10 +55,32 @@ const formattedDate = formatDate(frontmatter.publishedDate);
     @apply text-sm;
   }
 
+  /* Code block */
   #post pre {
     @apply rounded-lg;
+    @apply my-4;
     @apply p-4;
     @apply text-sm;
+    @apply text-left;
+    tab-size: 2;
+  }
+
+  #post pre ::selection {
+    @apply bg-cosmic-cobalt;
+    @apply text-alabaster;
+  }
+
+  #post blockquote {
+    @apply border-l-4;
+    @apply border-solid;
+    @apply border-cosmic-cobalt;
+    @apply bg-lavender-blue;
+    @apply px-4;
+    @apply py-2;
+  }
+
+  #post blockquote > p {
+    @apply my-0;
   }
 
   #post ol {

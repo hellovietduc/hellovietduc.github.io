@@ -19,7 +19,7 @@ const formattedDate = formatDate(props.publishedDate);
     <Link :url="url" :prefetch="true" class="hover:text-goldenrod transition-colors motion-reduce:transition-none">
       <h1 class="text-xl font-semibold">{{ title }}</h1>
     </Link>
-    <p>{{ description }}</p>
+    <p class="text-justify">{{ description }}</p>
     <div class="flex gap-3 text-sm">
       <time :datetime="publishedDate.toString()">{{ formattedDate }}</time>
       <TagList :tags="tags" />
