@@ -19,7 +19,7 @@ withDefaults(
     <div>
       <Link url="/" :aria-label="`${metadata.blogName}'s logo`">
         <img
-          src="/logo.png"
+          src="/assets/logo.png"
           :alt="`${metadata.blogName}'s logo`"
           width="80"
           height="80"
