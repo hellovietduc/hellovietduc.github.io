@@ -23,6 +23,7 @@ withDefaults(
           :alt="`${metadata.blogName}'s logo`"
           width="80"
           height="80"
+          loading="lazy"
           class="rounded-full hover:ring-2 ring-goldenrod hover:ring-offset-2 ring-offset-gray-50 transition-shadow motion-reduce:transition-none"
         />
       </Link>
