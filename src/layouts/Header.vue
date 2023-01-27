@@ -14,7 +14,7 @@ withDefaults(
 
 <template>
   <header
-    :class="['flex flex-col items-center gap-4', extended ? 'mb-12' : 'mb-8']"
+    :class="['flex flex-col items-center gap-4', extended ? 'mb-12' : 'mb-8', 'text-center']"
   >
     <div>
       <Link url="/" :aria-label="`${metadata.blogName}'s logo`">
