@@ -19,6 +19,7 @@
     "@sindresorhus/slugify": "^2.1.1",
     "astro": "^2.0.0",
     "astro-compress": "^1.1.28",
+    "astro-imagetools": "^0.7.6",
     "astro-robots-txt": "^0.3.11",
     "tailwindcss": "^3.0.24",
     "vue": "^3.2.30"

@@ -18,6 +18,9 @@ import compress from "astro-compress";
 // https://astro.build/config
 import robotsTxt from "astro-robots-txt";
 
+// https://astro-imagetools-docs.vercel.app/en/installation
+import { astroImageTools } from "astro-imagetools";
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://duckwho.codes',
@@ -28,5 +31,5 @@ export default defineConfig({
       theme: 'github-dark-dimmed'
     }
   },
-  integrations: [vue(), tailwind(), prefetch(), mdx(), compress(), robotsTxt()]
+  integrations: [vue(), tailwind(), prefetch(), mdx(), compress(), robotsTxt(), astroImageTools]
 });
