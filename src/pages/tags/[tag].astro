@@ -7,7 +7,7 @@ import Layout from '@layouts/Layout.astro';
 import metadata from '@metadata.json';
 
 export async function getStaticPaths() {
-  const tags = await getTags(true);
+  const tags = await getTags({ slugify: true });
   return tags.map((tag) => ({
     params: { tag },
   }));

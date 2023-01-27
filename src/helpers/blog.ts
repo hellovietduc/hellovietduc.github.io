@@ -19,13 +19,18 @@ export const getPublishedBlogEntriesByTag = async (tag: string | undefined) => {
   );
 };
 
-export const getTags = async (shouldSlugify = false) => {
+export const getTags = async (options?: {
+  slugify?: boolean;
+  sort?: 'asc' | 'desc';
+}) => {
   const blogEntries = await getPublishedBlogEntries();
   const tags = new Set<string>();
   blogEntries.forEach(({ data }) =>
     data.tags.forEach((rawTag) =>
-      tags.add(shouldSlugify ? slugify(rawTag, { decamelize: false }) : rawTag)
+      tags.add(
+        options?.slugify ? slugify(rawTag, { decamelize: false }) : rawTag
+      )
     )
   );
-  return [...tags];
+  return options?.sort ? [...tags].sort() : [...tags];
 };
