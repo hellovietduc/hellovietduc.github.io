@@ -9,5 +9,6 @@
       "@layouts/*": ["layouts/*"],
       "@metadata.json": ["metadata.json"]
     }
-  }
+  },
+  "include": ["src/**/*"]
 }

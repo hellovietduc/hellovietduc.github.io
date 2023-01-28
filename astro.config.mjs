@@ -1,25 +1,25 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from 'astro/config'
 
 // https://astro.build/config
-import vue from "@astrojs/vue";
+import vue from '@astrojs/vue'
 
 // https://astro.build/config
-import tailwind from "@astrojs/tailwind";
+import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
-import prefetch from "@astrojs/prefetch";
+import prefetch from '@astrojs/prefetch'
 
 // https://astro.build/config
-import mdx from "@astrojs/mdx";
+import mdx from '@astrojs/mdx'
 
 // https://astro.build/config
-import compress from "astro-compress";
+import compress from 'astro-compress'
 
 // https://astro.build/config
-import robotsTxt from "astro-robots-txt";
+import robotsTxt from 'astro-robots-txt'
 
 // https://astro-imagetools-docs.vercel.app/en/installation
-import { astroImageTools } from "astro-imagetools";
+import { astroImageTools } from 'astro-imagetools'
 
 // https://astro.build/config
 export default defineConfig({
@@ -28,8 +28,16 @@ export default defineConfig({
     shikiConfig: {
       // Choose from Shiki's built-in themes (or add your own)
       // https://github.com/shikijs/shiki/blob/main/docs/themes.md
-      theme: 'github-dark-dimmed'
-    }
+      theme: 'github-dark-dimmed',
+    },
   },
-  integrations: [vue(), tailwind(), prefetch(), mdx(), compress(), robotsTxt(), astroImageTools]
-});
+  integrations: [
+    vue(),
+    tailwind(),
+    prefetch(),
+    mdx(),
+    compress(),
+    robotsTxt(),
+    astroImageTools,
+  ],
+})
