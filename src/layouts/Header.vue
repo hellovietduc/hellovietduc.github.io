@@ -21,7 +21,7 @@ withDefaults(
     ]"
   >
     <div>
-      <Link url="/" :aria-label="`${metadata.blogName}'s logo`">
+      <Link url="/" aria-label="Go to homepage">
         <img
           src="/assets/logo.png"
           :alt="`${metadata.blogName}'s logo`"
