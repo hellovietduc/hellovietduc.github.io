@@ -15,7 +15,7 @@ const isInternal = computed(() => props.url.startsWith('/'))
 const rel = computed(() => {
   const rels = []
   if (isInternal.value && props.prefetch) {
-    rels.push('prefetch')
+    rels.push('prefetch-intent')
   }
   if (!isInternal.value) {
     rels.push('noopener', 'nofollow')
