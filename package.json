@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.1",
+    "@astrojs/sitemap": "^3.0.4",
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/vue": "^4.0.8",
     "@sindresorhus/slugify": "^2.2.1",
