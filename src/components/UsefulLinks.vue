@@ -9,7 +9,6 @@ import metadata from '@metadata.json'
       v-for="link in metadata.links"
       :key="link.url"
       :url="link.url"
-      :prefetch="true"
       class="flex flex-col items-center group"
     >
       <i

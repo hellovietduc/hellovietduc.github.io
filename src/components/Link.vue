@@ -1,26 +1,16 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-const props = withDefaults(
-  defineProps<{
-    url: string
-    prefetch?: boolean
-  }>(),
-  {
-    prefetch: false,
-  },
-)
+const props = defineProps<{
+  url: string
+}>()
 
 const isInternal = computed(() => props.url.startsWith('/'))
 const rel = computed(() => {
-  const rels = []
-  if (isInternal.value && props.prefetch) {
-    rels.push('prefetch-intent')
-  }
   if (!isInternal.value) {
-    rels.push('noopener', 'nofollow')
+    return 'noopener nofollow'
   }
-  return rels.join(' ')
+  return ''
 })
 </script>
 
