@@ -28,7 +28,6 @@ withDefaults(
           :alt="`${metadata.blogName}'s logo`"
           width="80"
           height="80"
-          loading="lazy"
           :class="[
             'rounded-full',
             'hover:ring-2 ring-goldenrod',
