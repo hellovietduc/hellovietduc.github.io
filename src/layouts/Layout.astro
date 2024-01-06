@@ -1,4 +1,5 @@
 ---
+import coverImg from '@assets/cover.png'
 import metadata from '@metadata.json'
 
 interface SocialMetaTagsProps {
@@ -20,7 +21,7 @@ const socialMetaTags: SocialMetaTagsProps = Astro.props.socialMetaTags ?? {
   url: Astro.url.toString(),
   title: metadata.pageTitle,
   description: metadata.blogDescription,
-  imageUrl: '/assets/cover.20230128.png',
+  imageUrl: coverImg.src,
 }
 ---
 

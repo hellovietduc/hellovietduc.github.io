@@ -1,4 +1,5 @@
 ---
+import coverImg from '@assets/cover.png'
 import TagList from '@components/TagList.vue'
 import { formatDate } from '@helpers/date'
 import Footer from '@layouts/Footer.vue'
@@ -14,7 +15,7 @@ const socialMetaTags = {
   url: frontmatter.url,
   title: pageTitle,
   description: frontmatter.description,
-  imageUrl: '/assets/cover.20230128.png',
+  imageUrl: coverImg.src,
 }
 const formattedDate = formatDate(frontmatter.publishedDate)
 ---
