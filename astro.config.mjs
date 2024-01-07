@@ -2,24 +2,19 @@ import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import vue from '@astrojs/vue'
 import compress from 'astro-compress'
-import { astroImageTools } from 'astro-imagetools'
 import robotsTxt from 'astro-robots-txt'
-import { defineConfig } from 'astro/config'
+import { defineConfig, squooshImageService } from 'astro/config'
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://duckwho.codes',
-  integrations: [
-    vue(),
-    tailwind(),
-    sitemap(),
-    robotsTxt(),
-    astroImageTools,
-    compress(),
-  ],
+  integrations: [vue(), tailwind(), sitemap(), robotsTxt(), compress()],
   prefetch: {
     prefetchAll: true,
     defaultStrategy: 'hover',
+  },
+  image: {
+    service: squooshImageService(),
   },
   markdown: {
     shikiConfig: {
