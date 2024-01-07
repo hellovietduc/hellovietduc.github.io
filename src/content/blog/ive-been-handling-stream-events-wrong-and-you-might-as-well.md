@@ -14,29 +14,29 @@ It's very likely that when you are looking for a Node.js Stream code, you find s
 
 ```jsx
 fs.createReadStream('./data.txt')
-	.pipe(writableStream)
-	.on('data', data => {
-		// do something with the data
-	})
-	.on('end', () => {
-		// done writing
-	})
+  .pipe(writableStream)
+  .on('data', (data) => {
+    // do something with the data
+  })
+  .on('end', () => {
+    // done writing
+  })
 ```
 
 The chainability of the API makes the code look clean. You like it and copy-paste it to your project. However, you notice something missing here. Ah, error handling! So you add it and now the code looks like this:
 
 ```jsx
 fs.createReadStream('./data.txt')
-	.pipe(writableStream)
-	.on('data', data => {
-		// do something with the data
-	})
-	.on('end', () => {
-		// done writing
-	})
-	.on('error', err => {
-		console.error('nothing escapes my traps!', err)
-	})
+  .pipe(writableStream)
+  .on('data', (data) => {
+    // do something with the data
+  })
+  .on('end', () => {
+    // done writing
+  })
+  .on('error', (err) => {
+    console.error('nothing escapes my traps!', err)
+  })
 ```
 
 Pleased with the carefulness you put into your code, you push this to the main branch and deploy the project. 5 hours later, your boss knocks at your inbox with a screenshot of the logs.
@@ -48,7 +48,7 @@ events.js:292
 
 You:
 
-![Thanos impossible meme](/img/thanos-impossible-meme.png)
+![Thanos impossible meme](../img/thanos-impossible-meme.png)
 
 ## The why
 

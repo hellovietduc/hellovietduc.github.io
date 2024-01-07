@@ -16,7 +16,6 @@ const makeUrl = (tag: string) => `/tags/${slugify(tag, { decamelize: false })}`
       :key="tag"
       :url="makeUrl(tag)"
       :aria-label="`Go to posts tagged with ${tag}`"
-      :prefetch="true"
       :class="[
         'text-sm',
         'font-medium',

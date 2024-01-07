@@ -24,7 +24,7 @@ Nếu đã sử dụng ZSH rồi thì không có lí do gì mà bạn không nê
 
 [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting) cung cấp syntax highlighting và format cho các câu lệnh bạn gõ trên terminal, cũng như cho output của một số câu lệnh thông dụng. Nếu bạn gõ sai, chẳng hạn `git` thành `gjt` thì fast-syntax-highlighting sẽ bôi đỏ `gjt` để cho bạn biết.
 
-![fast-syntax-highlighting](/img/fast-syntax-highlighting.png)
+![fast-syntax-highlighting](../img/fast-syntax-highlighting.png)
 
 [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) gợi ý câu lệnh dựa vào lịch sử command line hoặc tab completion và hiển thị mờ mờ tại con trỏ ngay khi bạn đang gõ. Với tính năng xịn xò này bạn có thể gõ terminal với tốc độ thần gió và ít phải nhớ câu lệnh hơn.
 
@@ -38,7 +38,7 @@ Nếu cho mình chọn chỉ một trong số 10 terminal tools mình gợi ý c
 
 fzf đọc lịch sử gõ terminal của bạn và cung cấp một giao diện fuzzy search cực kì xịn. Bạn chỉ cần gõ 2-3 kí tự của câu lệnh cần tìm là gần như đã có thể thấy nó xuất hiện ở kết quả search rồi. Từ tốc độ thần gió, bạn đã có thể gõ terminal với tốc độ người yêu lật mặt =))
 
-![fzf](/img/fzf.png)
+![fzf](../img/fzf.png)
 
 fzf chạy được trên hầu hết các shell (bao gồm cả ZSH và Bash), thậm chí có cả plugin cho Vim và nhiều chương trình khác.
 
@@ -46,25 +46,25 @@ fzf chạy được trên hầu hết các shell (bao gồm cả ZSH và Bash), 
 
 `cat` chắc chắn là một trong những câu lệnh bạn dùng nhiều nhất trong terminal. Vậy tại sao lại không gắn thêm cánh cho mèo? [bat](https://github.com/sharkdp/bat) cung cấp syntax highlighting cho rất nhiều ngôn ngữ lập trình và ngôn ngữ markup, thậm chí đánh dấu cả dòng có sự thay đổi dựa vào git. Nhìn output của bat chắc chắn sướng mắt hơn nhiều phải không?
 
-![bat](/img/bat.png)
+![bat](../img/bat.png)
 
 ## 5. lazygit
 
 Như cái tên, [lazygit](https://github.com/jesseduffield/lazygit) dành cho những con người lười dùng câu lệnh git. Giao diện của lazygit khá đầy đủ, bạn có thể xem các file thay đổi, commit, chuyển nhánh... tất tần tật trên đây.
 
-![lazygit](/img/lazygit.png)
+![lazygit](../img/lazygit.png)
 
 ## 6. diff-so-fancy
 
 Nếu sử dụng lazygit thường xuyên thì bạn sẽ nhìn qua nhìn lại output của `git diff` khá nhiều. Có điều là diff mặc định của git nhìn khá chán, khó đọc. [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) biến output này thành gần giống như của GitHub hay VSCode, nhìn dễ hơn nhiều. Bạn có thể custom lại config màu theo ý thích. diff-so-fancy áp dụng output này cho tất cả câu lệnh `git diff` chứ không chỉ riêng khi chạy lazygit.
 
-![diff-so-fancy](/img/diff-so-fancy.png)
+![diff-so-fancy](../img/diff-so-fancy.png)
 
 ## 7. tmux
 
 [tmux](https://github.com/tmux/tmux) là một chương trình giúp bạn phân chia màn hình terminal ra nhiều panes và windows, và lưu layout đó dưới một session. Bạn có thể tạo nhiều sessions và chuyển qua lại giữa chúng mà không mất layout của session cũ. tmux cũng hỗ trợ plugins và themes rất đa dạng, các bạn có thể tham khảo ở list [awesome-tmux](https://github.com/rothgar/awesome-tmux).
 
-![tmux](/img/tmux.png)
+![tmux](../img/tmux.png)
 
 ## 8. tmuxp
 
@@ -74,10 +74,10 @@ tmux rất tuyệt, cho đến khi bạn phải restart máy tính. Với [tmuxp
 
 [nnn](https://github.com/jarun/nnn) là một trình quản lý file trên terminal, vì thế mà tốc độ duyệt files và thư mục rất nhanh. Bạn vẫn có thể preview ảnh và mở files bằng GUI apps. Ngoài ra, nnn còn có những tính năng khác như batch rename, mở file text sang một pane tmux bên cạnh, type-to-nav, v.v.
 
-![nnn](/img/nnn.png)
+![nnn](../img/nnn.png)
 
 ## 10. tldr
 
 TL;DR (viết tắt của "Too Long. Didn't Read") là khi một bài viết dài quá, bạn lười đọc nên tác giả để một phần đầu hoặc cuối bài tóm tắt lại những ý chính. Tương tự, các terminal tools đôi khi có quá nhiều commands, options mà hầu hết đều không dùng đến. [tldr](https://github.com/tldr-pages/tldr) là một chương trình tóm tắt và trình bày lại ngắn gọn vài câu lệnh hay sử dụng của một chương trình nào đó. Ví dụ bạn muốn xem qua cách sử dụng `tar` thì chỉ cần gõ `tldr tar`.
 
-![tldr](/img/tldr.png)
+![tldr](../img/tldr.png)

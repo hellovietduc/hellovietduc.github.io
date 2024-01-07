@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import logoImg from '@assets/logo.png'
 import Link from '@components/Link.vue'
 import metadata from '@metadata.json'
 
@@ -23,11 +24,10 @@ withDefaults(
     <div>
       <Link url="/" aria-label="Go to homepage">
         <img
-          src="/assets/logo.png"
+          :src="logoImg.src"
           :alt="`${metadata.blogName}'s logo`"
           width="80"
           height="80"
-          loading="lazy"
           :class="[
             'rounded-full',
             'hover:ring-2 ring-goldenrod',
