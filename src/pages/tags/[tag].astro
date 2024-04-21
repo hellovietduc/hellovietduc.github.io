@@ -23,7 +23,7 @@ const posts = blogEntries.map((entry) => ({
 }))
 ---
 
-<Layout title={pageTitle}>
+<Layout title={pageTitle} enableGoToTopButton={true}>
   <Header />
   <main class="max-w-[70ch] mx-auto">
     <PostList posts={posts} />
