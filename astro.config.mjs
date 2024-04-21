@@ -8,8 +8,6 @@ import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import { h } from 'hastscript'
 
-const headerLink = h('span', '#')
-
 // https://astro.build/config
 export default defineConfig({
   site: 'https://duckwho.codes',
@@ -24,7 +22,7 @@ export default defineConfig({
   markdown: {
     shikiConfig: {
       // Choose from Shiki's built-in themes (or add your own)
-      // https://github.com/shikijs/shiki/blob/main/docs/themes.md
+      // https://shiki.style/themes
       theme: 'rose-pine-dawn',
     },
     rehypePlugins: [
@@ -33,9 +31,13 @@ export default defineConfig({
         rehypeAutolinkHeadings,
         {
           headingProperties: { class: 'heading' },
-          properties: { class: 'heading-link' },
-          behavior: 'prepend',
-          content: [headerLink],
+          properties: {
+            class: 'heading-link',
+            ariaHidden: 'true',
+            tabIndex: -1,
+          },
+          behavior: 'append',
+          content: [h(null, '#')],
         },
       ],
     ],
