@@ -10,13 +10,14 @@ const makeUrl = (tag: string) => `/tags/${slugify(tag, { decamelize: false })}`
 </script>
 
 <template>
-  <div class="flex flex-wrap gap-1.5">
+  <div class="inline">
     <Link
       v-for="tag in tags"
       :key="tag"
       :url="makeUrl(tag)"
       :aria-label="`Go to posts tagged with ${tag}`"
       :class="[
+        'ms-1.5 first:ms-0',
         'text-sm',
         'font-medium',
         'uppercase',

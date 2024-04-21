@@ -20,12 +20,12 @@ const formattedDate = formatDate(props.publishedDate)
       :url="url"
       class="hover:text-goldenrod transition-colors motion-reduce:transition-none"
     >
-      <h1 class="text-xl font-semibold">{{ title }}</h1>
+      <h2 class="text-xl font-semibold">{{ title }}</h2>
     </Link>
-    <p class="text-justify">{{ description }}</p>
-    <div class="flex gap-3 text-sm">
+    <p>{{ description }}</p>
+    <div class="text-sm">
       <time :datetime="publishedDate.toString()">{{ formattedDate }}</time>
-      <TagList :tags="tags" />
+      <TagList class="ms-3" :tags="tags" />
     </div>
   </article>
 </template>
