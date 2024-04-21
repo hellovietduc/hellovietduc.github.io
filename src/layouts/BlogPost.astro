@@ -159,4 +159,20 @@ const formattedDate = formatDate(frontmatter.publishedDate)
     @apply text-3xl;
     @apply font-semibold;
   }
+
+  /* Header link */
+  #post .heading-link {
+    @apply opacity-0;
+    @apply float-start;
+    @apply -ms-[1.5ch];
+    @apply pe-[0.5ch];
+    @apply text-[.85em];
+    @apply text-goldenrod;
+    @apply no-underline;
+  }
+
+  #post .heading:hover .heading-link,
+  #post .heading-link:hover {
+    @apply opacity-100;
+  }
 </style>
