@@ -20,19 +20,22 @@ const socialMetaTags = {
 const formattedDate = formatDate(frontmatter.publishedDate)
 ---
 
-<Layout title={pageTitle} socialMetaTags={socialMetaTags}>
+<Layout
+  title={pageTitle}
+  socialMetaTags={socialMetaTags}
+  enableGoToTopButton={true}
+>
   <Header />
   <main>
-    <h1 class="mb-4 text-2xl text-center font-semibold">
+    <h1 class="mb-4 text-3xl text-center font-semibold">
       {frontmatter.title}
     </h1>
     <p class="mb-8 text-sm text-center">
-      Published
       <time datetime={frontmatter.publishedDate.toString()}>
         {formattedDate}
       </time>
     </p>
-    <article id="post" class="text-justify">
+    <article id="post">
       <slot />
     </article>
   </main>
@@ -101,7 +104,7 @@ const formattedDate = formatDate(frontmatter.publishedDate)
 
   #post li {
     @apply my-2;
-    @apply text-lg;
+    @apply text-base;
   }
 
   #post a {
@@ -112,51 +115,67 @@ const formattedDate = formatDate(frontmatter.publishedDate)
     @apply no-underline;
     @apply text-goldenrod;
     @apply transition-colors;
-    @apply motion-reduce:transition-none;
   }
 
   #post p {
     @apply my-4;
-    @apply text-lg;
+    @apply text-base;
+    @apply leading-7;
   }
 
   #post h6 {
     @apply mt-4;
     @apply mb-2;
-    @apply text-xl;
+    @apply text-lg;
   }
 
   #post h5 {
     @apply mt-5;
     @apply mb-2.5;
-    @apply text-1.5xl;
+    @apply text-xl;
   }
 
   #post h4 {
     @apply mt-6;
     @apply mb-3;
-    @apply text-2xl;
+    @apply text-1.5xl;
     @apply font-medium;
   }
 
   #post h3 {
     @apply mt-8;
     @apply mb-4;
-    @apply text-2.5xl;
+    @apply text-2xl;
     @apply font-medium;
   }
 
   #post h2 {
     @apply mt-10;
     @apply mb-5;
-    @apply text-3xl;
+    @apply text-2.5xl;
     @apply font-semibold;
   }
 
   #post h1 {
     @apply mt-12;
     @apply mb-6;
-    @apply text-3.5xl;
+    @apply text-3xl;
     @apply font-semibold;
+  }
+
+  /* Header link */
+  #post .heading-link {
+    @apply opacity-0;
+    @apply float-start;
+    @apply -ms-[1.5ch];
+    @apply pe-[0.5ch];
+    @apply text-[.85em];
+    @apply text-goldenrod;
+    @apply no-underline;
+  }
+
+  #post .heading:hover .heading-link,
+  #post .heading-link:hover {
+    @apply opacity-100;
   }
 </style>

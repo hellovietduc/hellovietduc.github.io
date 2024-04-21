@@ -1,6 +1,7 @@
 ---
 import coverImg from '@assets/cover.png'
 import metadata from '@metadata.json'
+import GoToTopButton from '@components/GoToTopButton.vue'
 
 interface SocialMetaTagsProps {
   contentType: string
@@ -13,6 +14,7 @@ interface SocialMetaTagsProps {
 export interface Props {
   title: string
   socialMetaTags?: SocialMetaTagsProps
+  enableGoToTopButton?: boolean
 }
 
 const pageTitle = Astro.props.frontmatter?.title || Astro.props.title
@@ -25,8 +27,8 @@ const socialMetaTags: SocialMetaTagsProps = Astro.props.socialMetaTags ?? {
 }
 ---
 
-<!DOCTYPE html>
-<html lang="en" class="text-sm md:text-base">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -44,8 +46,9 @@ const socialMetaTags: SocialMetaTagsProps = Astro.props.socialMetaTags ?? {
     <meta property="og:description" content={socialMetaTags.description} />
     <meta property="og:image" content={socialMetaTags.imageUrl} />
   </head>
-  <body class="max-w-screen-md mx-auto p-4 bg-gray-50 text-eerie-black">
+  <body id="top" class="max-w-[70ch] mx-auto p-4 bg-gray-50 text-eerie-black">
     <slot />
+    {Astro.props.enableGoToTopButton && <GoToTopButton client:load />}
     <style is:global>
       html {
         font-family: system-ui, sans-serif;
@@ -53,8 +56,15 @@ const socialMetaTags: SocialMetaTagsProps = Astro.props.socialMetaTags ?? {
 
       code,
       pre {
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
       }
 
       ::selection {
