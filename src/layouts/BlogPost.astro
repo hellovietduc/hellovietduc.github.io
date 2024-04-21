@@ -72,11 +72,6 @@ const formattedDate = formatDate(frontmatter.publishedDate)
     tab-size: 2;
   }
 
-  #post pre ::selection {
-    @apply bg-cosmic-cobalt;
-    @apply text-alabaster;
-  }
-
   #post blockquote {
     @apply border-l-4;
     @apply border-solid;
@@ -174,8 +169,10 @@ const formattedDate = formatDate(frontmatter.publishedDate)
     @apply no-underline;
   }
 
-  #post .heading:hover .heading-link,
-  #post .heading-link:hover {
-    @apply opacity-100;
+  @media (hover: hover) {
+    #post .heading:hover .heading-link,
+    #post .heading-link:hover {
+      @apply opacity-100;
+    }
   }
 </style>
