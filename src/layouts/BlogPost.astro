@@ -161,6 +161,7 @@ const formattedDate = formatDate(frontmatter.publishedDate)
   /* Header link */
   #post .heading-link {
     @apply opacity-0;
+    @apply transition-opacity;
     @apply float-start;
     @apply -ms-[1.5ch];
     @apply pe-[0.5ch];
@@ -173,6 +174,7 @@ const formattedDate = formatDate(frontmatter.publishedDate)
     #post .heading:hover .heading-link,
     #post .heading-link:hover {
       @apply opacity-100;
+      @apply transition-opacity;
     }
   }
 </style>
