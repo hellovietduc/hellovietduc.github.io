@@ -5,27 +5,28 @@ import metadata from '@metadata.json'
 </script>
 
 <template>
-  <div class="@container/useful-links flex justify-center w-full">
-    <div class="flex gap-4 @md/useful-links:gap-6">
-      <Link
-        v-for="link in metadata.links"
-        :key="link.url"
-        :url="link.url"
-        class="flex flex-col items-center group"
+  <div class="flex justify-center items-center gap-2 @lg/header:gap-4">
+    <Link
+      v-for="link in metadata.links"
+      :key="link.url"
+      :url="link.url"
+      :aria-label="link.ariaLabel"
+      class="group flex flex-col items-center"
+    >
+      <Icon
+        :name="link.icon"
+        :class="[
+          link.text && 'inline @lg/header:hidden',
+          'bg-eerie-black group-hover:bg-goldenrod',
+          'transition-colors',
+        ]"
+      />
+      <span
+        v-if="link.text"
+        class="hidden @lg/header:inline text-sm group-hover:text-goldenrod transition-colors"
       >
-        <Icon
-          :name="link.icon"
-          :class="[
-            'bg-eerie-black group-hover:bg-goldenrod',
-            'transition-colors',
-          ]"
-        />
-        <p
-          class="hidden @md/useful-links:block text-sm group-hover:text-goldenrod"
-        >
-          {{ link.text }}
-        </p>
-      </Link>
-    </div>
+        {{ link.text }}
+      </span>
+    </Link>
   </div>
 </template>

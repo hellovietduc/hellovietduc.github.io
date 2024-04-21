@@ -7,21 +7,25 @@
   "links": {
     "aboutme": {
       "text": "About me",
+      "ariaLabel": "Go to about me page",
       "icon": "file-person-fill",
       "url": "/about"
     },
     "rss": {
-      "text": "Subscribe",
+      "text": false,
+      "ariaLabel": "Go to my RSS page",
       "icon": "rss-fill",
       "url": "/rss.xml"
     },
     "linkedin": {
-      "text": "LinkedIn",
+      "text": false,
+      "ariaLabel": "Go to my LinkedIn profile",
       "icon": "linkedin",
       "url": "https://www.linkedin.com/in/hellovietduc"
     },
     "github": {
-      "text": "GitHub",
+      "text": false,
+      "ariaLabel": "Go to my GitHub profile",
       "icon": "github",
       "url": "https://github.com/hellovietduc"
     }

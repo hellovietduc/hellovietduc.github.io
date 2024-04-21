@@ -18,6 +18,9 @@ module.exports = {
         '3.5xl': ['2.125rem', '2.5rem'],
       },
     },
+    screens: {
+      '2xs': '32rem',
+    },
   },
   plugins: [require('@tailwindcss/container-queries')],
 }
