@@ -16,10 +16,7 @@ const formattedDate = formatDate(props.publishedDate)
 
 <template>
   <article class="flex flex-col items-start gap-4">
-    <Link
-      :url="url"
-      class="hover:text-goldenrod transition-colors motion-reduce:transition-none"
-    >
+    <Link :url="url" class="hover:text-goldenrod transition-colors">
       <h2 class="text-xl font-semibold">{{ title }}</h2>
     </Link>
     <p>{{ description }}</p>

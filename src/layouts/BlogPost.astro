@@ -20,7 +20,11 @@ const socialMetaTags = {
 const formattedDate = formatDate(frontmatter.publishedDate)
 ---
 
-<Layout title={pageTitle} socialMetaTags={socialMetaTags}>
+<Layout
+  title={pageTitle}
+  socialMetaTags={socialMetaTags}
+  enableGoToTopButton={true}
+>
   <Header />
   <main>
     <h1 class="mb-4 text-3xl text-center font-semibold">
@@ -111,7 +115,6 @@ const formattedDate = formatDate(frontmatter.publishedDate)
     @apply no-underline;
     @apply text-goldenrod;
     @apply transition-colors;
-    @apply motion-reduce:transition-none;
   }
 
   #post p {

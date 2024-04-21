@@ -35,7 +35,7 @@ withDefaults(
             'size-10 @md/header:size-20',
             'hover:ring-2 ring-goldenrod',
             'hover:ring-offset-2 ring-offset-gray-50',
-            'transition-shadow motion-reduce:transition-none',
+            'transition-shadow',
           ]"
         />
       </Link>

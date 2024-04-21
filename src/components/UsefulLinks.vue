@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Icon from '@components/Icon.vue'
 import Link from '@components/Link.vue'
 import metadata from '@metadata.json'
 </script>
@@ -12,17 +13,13 @@ import metadata from '@metadata.json'
         :url="link.url"
         class="flex flex-col items-center group"
       >
-        <i
+        <Icon
+          :name="link.icon"
           :class="[
-            'w-6 h-6',
             'bg-eerie-black group-hover:bg-goldenrod',
-            'transition-colors motion-reduce:transition-none',
+            'transition-colors',
           ]"
-          :style="{
-            '-webkit-mask': `url(${link.icon}) no-repeat center`,
-            mask: `url(${link.icon}) no-repeat center`,
-          }"
-        ></i>
+        />
         <p
           class="hidden @md/useful-links:block text-sm group-hover:text-goldenrod"
         >

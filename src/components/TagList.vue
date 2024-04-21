@@ -22,7 +22,7 @@ const makeUrl = (tag: string) => `/tags/${slugify(tag, { decamelize: false })}`
         'font-medium',
         'uppercase',
         'text-goldenrod hover:text-eerie-black',
-        'transition-colors motion-reduce:transition-none',
+        'transition-colors',
       ]"
     >
       #{{ tag }}

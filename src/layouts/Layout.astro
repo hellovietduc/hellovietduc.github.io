@@ -1,6 +1,7 @@
 ---
 import coverImg from '@assets/cover.png'
 import metadata from '@metadata.json'
+import GoToTopButton from '@components/GoToTopButton.vue'
 
 interface SocialMetaTagsProps {
   contentType: string
@@ -13,6 +14,7 @@ interface SocialMetaTagsProps {
 export interface Props {
   title: string
   socialMetaTags?: SocialMetaTagsProps
+  enableGoToTopButton?: boolean
 }
 
 const pageTitle = Astro.props.frontmatter?.title || Astro.props.title
@@ -44,8 +46,9 @@ const socialMetaTags: SocialMetaTagsProps = Astro.props.socialMetaTags ?? {
     <meta property="og:description" content={socialMetaTags.description} />
     <meta property="og:image" content={socialMetaTags.imageUrl} />
   </head>
-  <body class="max-w-[70ch] mx-auto p-4 bg-gray-50 text-eerie-black">
+  <body id="top" class="max-w-[70ch] mx-auto p-4 bg-gray-50 text-eerie-black">
     <slot />
+    {Astro.props.enableGoToTopButton && <GoToTopButton client:load />}
     <style is:global>
       html {
         font-family: system-ui, sans-serif;
