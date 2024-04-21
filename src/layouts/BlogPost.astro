@@ -26,7 +26,7 @@ const formattedDate = formatDate(frontmatter.publishedDate)
   enableGoToTopButton={true}
 >
   <Header />
-  <main>
+  <main class="max-w-[70ch] mx-auto">
     <h1 class="mb-4 text-3xl text-center font-semibold">
       {frontmatter.title}
     </h1>
@@ -40,7 +40,7 @@ const formattedDate = formatDate(frontmatter.publishedDate)
     </article>
   </main>
   <Footer>
-    <TagList tags={frontmatter.tags} />
+    <TagList class="mt-6" tags={frontmatter.tags} />
   </Footer>
 </Layout>
 
@@ -70,11 +70,6 @@ const formattedDate = formatDate(frontmatter.publishedDate)
     @apply text-sm;
     @apply text-left;
     tab-size: 2;
-  }
-
-  #post pre ::selection {
-    @apply bg-cosmic-cobalt;
-    @apply text-alabaster;
   }
 
   #post blockquote {
@@ -166,6 +161,7 @@ const formattedDate = formatDate(frontmatter.publishedDate)
   /* Header link */
   #post .heading-link {
     @apply opacity-0;
+    @apply transition-opacity;
     @apply float-start;
     @apply -ms-[1.5ch];
     @apply pe-[0.5ch];
@@ -174,8 +170,11 @@ const formattedDate = formatDate(frontmatter.publishedDate)
     @apply no-underline;
   }
 
-  #post .heading:hover .heading-link,
-  #post .heading-link:hover {
-    @apply opacity-100;
+  @media (hover: hover) {
+    #post .heading:hover .heading-link,
+    #post .heading-link:hover {
+      @apply opacity-100;
+      @apply transition-opacity;
+    }
   }
 </style>
