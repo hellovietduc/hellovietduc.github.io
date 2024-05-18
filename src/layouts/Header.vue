@@ -16,7 +16,7 @@ import UsefulLinks from '@components/UsefulLinks.vue'
     ]"
   >
     <div class="flex items-center gap-2">
-      <Link class="shrink-0" url="/" aria-label="Go to homepage">
+      <Link class="shrink-0" url="/" title="Home" aria-label="Go to homepage">
         <img
           :src="logoImg.src"
           :alt="`${metadata.blogName}'s logo`"
@@ -36,9 +36,3 @@ import UsefulLinks from '@components/UsefulLinks.vue'
     <UsefulLinks />
   </header>
 </template>
-
-<style scoped>
-.writing-vertical-lr {
-  writing-mode: vertical-lr;
-}
-</style>
