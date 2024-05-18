@@ -29,7 +29,7 @@ import UsefulLinks from '@components/UsefulLinks.vue'
           ]"
         />
       </Link>
-      <p class="hidden @[16rem]/header:inline grow text-1.5xl font-semibold">
+      <p class="hidden @[21rem]/header:inline grow text-1.5xl font-semibold">
         {{ metadata.blogName }}
       </p>
     </div>
