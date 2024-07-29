@@ -1,8 +1,8 @@
 ---
-import coverImg from '@assets/cover.png';
-import GoToTopButton from '@components/GoToTopButton.vue';
-import metadata from '@metadata.json';
-import { ViewTransitions } from 'astro:transitions';
+import coverImg from '@assets/cover.png'
+import GoToTopButton from '@components/GoToTopButton.vue'
+import metadata from '@metadata.json'
+import { ViewTransitions } from 'astro:transitions'
 
 interface SocialMetaTagsProps {
   contentType: string
@@ -46,6 +46,10 @@ const socialMetaTags: SocialMetaTagsProps = Astro.props.socialMetaTags ?? {
     <meta property="og:title" content={socialMetaTags.title} />
     <meta property="og:description" content={socialMetaTags.description} />
     <meta property="og:image" content={socialMetaTags.imageUrl} />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
     <ViewTransitions />
   </head>
   <body id="top" class="p-4 bg-gray-50 text-eerie-black">
